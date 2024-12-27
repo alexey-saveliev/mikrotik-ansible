@@ -38,9 +38,14 @@
     password: "{{ ros_api_password }}"
     username: "{{ ros_api_user }}"    
     path: interface bridge vlan
-    find:
-      #bridge: "{{ hostvars[inventory_hostname]['bridge'].name }}"
-      vlan-ids: item.vlanid | int
+    find: >-
+      {{
+        dict([
+          ['bridge', hostvars[inventory_hostname]['bridge'].name],
+          ['vlan-ids', item.vlanid]
+        ])
+
+      }}      
     values:
       comment: "{{ item.comment }}"
       
