@@ -1,5 +1,6 @@
 ---
+
 ros7:
   hosts:
     UR01:
-        address: 192.168.100.2
+      address: 192.168.100.2

@@ -13,12 +13,12 @@
     path: interface bridge vlan
   register: interface_bridge_vlan
 
-- name: Print VLANs
-  ansible.builtin.debug:
-    var: interface_bridge_vlan
+# - name: Print VLANs
+#   ansible.builtin.debug:
+#     var: interface_bridge_vlan
 
 - name: Create VLANs
-  loop: "{{ hostvars[inventory_hostname]['bridge']['vlan'] }}"
+  loop: "{{ hostvars[inventory_hostname]['bridge_vlan'] }}"
   # Создаем VLAN только если его нет в списке VLAN, полученном с устройства
   when: interface_bridge_vlan.result | selectattr('vlan-ids','eq',item.vlanid) | length == 0
   community.routeros.api_modify:
@@ -32,7 +32,7 @@
         bridge: "{{ hostvars[inventory_hostname]['bridge'].name }}"
 
 - name: Update VLAN settings
-  loop: "{{ hostvars[inventory_hostname]['bridge']['vlan'] }}"
+  loop: "{{ hostvars[inventory_hostname]['bridge_vlan'] }}"
   community.routeros.api_find_and_modify:
     hostname: "{{ address }}"
     password: "{{ ros_api_password }}"
@@ -48,4 +48,121 @@
       }}      
     values:
       comment: "{{ item.comment }}"
-      
+
+# - name: Print hostvars
+#   ansible.builtin.debug:
+#     var: hostvars[inventory_hostname]
+#   tags:
+#     - bridge-port
+
+- name: Get bridge port info
+  community.routeros.api_info:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: interface bridge port
+  register: interface_bridge_port
+  tags:
+    - bridge-port
+
+# - name: Print bridge port
+#   ansible.builtin.debug:
+#     var: interface_bridge_port
+#   tags:
+#     - bridge-port
+
+- name: Add ports to bridge
+  loop: "{{ hostvars[inventory_hostname]['bridge_port'] }}"
+  # Добавляем порт в bridge только если его нет в нем
+  when: >- 
+    (interface_bridge_port.result
+    | selectattr('bridge','eq',hostvars[inventory_hostname]['bridge'].name)
+    | selectattr('interface','eq',item.name) | length) == 0
+  community.routeros.api_modify:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: interface bridge port
+    # restrict directive available since v.2.18 of community.routeros
+    # restrict:
+    #   - field: bridge
+    #     values:
+    #       - "{{ hostvars[inventory_hostname]['bridge'].name }}"
+    #     invert: true
+    data:      
+      - interface: "{{ item.name }}"
+        pvid: "{{ item.pvid }}"
+        comment: "{{ item.comment }}"
+        bridge: "{{ hostvars[inventory_hostname]['bridge'].name }}"
+  tags:
+    - bridge-port
+
+# Получаем обновленные параметры портов в bridge
+# Пропускать, если новые порты не были добавлены в bridge, нельзя т.к. на выходе получим пустую
+# переменную interface_bridge_port.
+- name: Get bridge port info
+  community.routeros.api_info:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: interface bridge port
+  register: interface_bridge_port
+  tags:
+    - bridge-port
+
+- name: Update bridge port settings
+  loop: "{{ hostvars[inventory_hostname]['bridge_port'] }}"
+  when: >- 
+    (interface_bridge_port.result
+    | selectattr('bridge','eq',hostvars[inventory_hostname]['bridge'].name)
+    | selectattr('interface','eq',item.name) 
+    | selectattr('pvid','eq',item.pvid) 
+    | selectattr('comment','eq',item.comment) | length) == 0
+  community.routeros.api_find_and_modify:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: interface bridge port
+    find:
+      interface: "{{ item.name }}"
+      bridge: "{{ hostvars[inventory_hostname]['bridge'].name }}"
+    values:      
+      pvid: "{{ item.pvid }}"
+      comment: "{{ item.comment }}"        
+  tags:
+    - bridge-port
+
+- name: Get physical interface info
+  community.routeros.api_info:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: interface ethernet
+  register: interface_ethernet
+  tags:
+    - bridge-port
+
+# - name: Print physical interfaces
+#   ansible.builtin.debug:
+#     var: interface_ethernet
+#   tags:
+#     - bridge-port
+
+- name: Update physical interfaces comments
+  loop: "{{ hostvars[inventory_hostname]['bridge_port'] }}"
+  # Условие с selectattr ставить нельзя т.К. атрибут comment может быть не определен
+  # when: >- 
+  #   (interface_ethernet.result
+  #   | selectattr('name','eq',item.name)
+  #   | selectattr('comment','eq',item.comment) | length) == 0
+  community.routeros.api_find_and_modify:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: interface ethernet
+    find:
+      name: "{{ item.name }}"
+    values:
+      comment: "{{ item.comment }}"        
+  tags:
+    - bridge-port
