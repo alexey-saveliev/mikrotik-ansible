@@ -1,0 +1,46 @@
+---
+# - name: Lookup 
+#   ansible.builtin.debug:
+#     msg: "{{ hostvars[inventory_hostname]['bridge']['vlan'] | selectattr('vlanid','ne', 100) | length }}"
+#   loop: "{{ hostvars[inventory_hostname]['bridge']['vlan'] }}"
+#   when: '100' in "{{ hostvars[inventory_hostname]['bridge']['vlan'] | json_query('[].vlanid') }}"
+
+- name: Get VLAN Info
+  community.routeros.api_info:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: interface bridge vlan
+  register: interface_bridge_vlan
+
+- name: Print VLANs
+  ansible.builtin.debug:
+    var: interface_bridge_vlan
+
+- name: Create VLANs
+  loop: "{{ hostvars[inventory_hostname]['bridge']['vlan'] }}"
+  # Создаем VLAN только если его нет в списке VLAN, полученном с устройства
+  when: interface_bridge_vlan.result | selectattr('vlan-ids','eq',item.vlanid) | length == 0
+  community.routeros.api_modify:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: interface bridge vlan
+    data:      
+      - vlan-ids: "{{ item.vlanid }}"
+        comment: "{{ item.comment }}"
+        bridge: "{{ hostvars[inventory_hostname]['bridge'].name }}"
+
+- name: Update VLAN settings
+  loop: "{{ hostvars[inventory_hostname]['bridge']['vlan'] }}"
+  community.routeros.api_find_and_modify:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"    
+    path: interface bridge vlan
+    find:
+      #bridge: "{{ hostvars[inventory_hostname]['bridge'].name }}"
+      vlan-ids: item.vlanid | int
+    values:
+      comment: "{{ item.comment }}"
+      
