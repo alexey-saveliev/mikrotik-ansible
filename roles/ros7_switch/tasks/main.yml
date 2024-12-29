@@ -49,9 +49,19 @@
     values:
       comment: "{{ item.comment }}"
 
-# - name: Print hostvars
+# - name: Print hostvars bridge_port
 #   ansible.builtin.debug:
-#     var: hostvars[inventory_hostname]
+#     var: hostvars[inventory_hostname]['bridge_port']
+
+# - name: Print hostvars bridge_port filtered
+#   ansible.builtin.debug:
+#     # msg: "{{ hostvars[inventory_hostname]['bridge_port'] | community.general.json_query('[].[?pvid==100].name') }}"
+#     msg: >-
+#       "{{ hostvars[inventory_hostname]['bridge_port']
+#       | selectattr ('tagged','defined')
+#       | selectattr ('tagged','contains',110)
+#       | map(attribute='name') | join(',')
+#       }}"
 #   tags:
 #     - bridge-port
 
@@ -137,11 +147,11 @@
     hostname: "{{ address }}"
     password: "{{ ros_api_password }}"
     username: "{{ ros_api_user }}"
+
     path: interface ethernet
   register: interface_ethernet
   tags:
     - bridge-port
-
 # - name: Print physical interfaces
 #   ansible.builtin.debug:
 #     var: interface_ethernet
@@ -164,5 +174,25 @@
       name: "{{ item.name }}"
     values:
       comment: "{{ item.comment }}"        
+  tags:
+    - bridge-port
+
+- name: Set VLAN tagged ports
+  loop: "{{ hostvars[inventory_hostname]['bridge_vlan'] }}"
+  community.routeros.api_find_and_modify:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"    
+    path: interface bridge vlan
+    find: >-
+      {{
+        dict([
+          ['bridge', hostvars[inventory_hostname]['bridge'].name],
+          ['vlan-ids', item.vlanid]
+        ])
+
+      }}      
+    values:
+      tagged: "{{ hostvars[inventory_hostname]['bridge_port'] | selectattr ('tagged','defined') | selectattr ('tagged','contains',item.vlanid) | map(attribute='name') | join(',') }}"
   tags:
     - bridge-port
