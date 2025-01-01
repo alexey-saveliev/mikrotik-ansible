@@ -5,6 +5,15 @@
 #   loop: "{{ hostvars[inventory_hostname]['bridge']['vlan'] }}"
 #   when: '100' in "{{ hostvars[inventory_hostname]['bridge']['vlan'] | json_query('[].vlanid') }}"
 
+- name: Set device hostname
+  community.routeros.api_modify:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: system identity
+    data:      
+      - name: "{{ inventory_hostname }}"
+      
 - name: Get VLAN Info
   community.routeros.api_info:
     hostname: "{{ address }}"
