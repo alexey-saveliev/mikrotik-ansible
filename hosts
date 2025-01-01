@@ -2,7 +2,7 @@
 
 ros7:
   hosts:
-    UR01:
+    UR02:
       address: 192.168.100.2
     USW04:
       address: 192.168.100.4
