@@ -112,6 +112,7 @@
 # переменную interface_bridge_port.
 - name: Get bridge port info
   community.routeros.api_info:
+    hide_defaults: false
     hostname: "{{ address }}"
     password: "{{ ros_api_password }}"
     username: "{{ ros_api_user }}"
@@ -119,6 +120,12 @@
   register: interface_bridge_port
   tags:
     - bridge-port
+
+# - name: Print bridge port
+#   ansible.builtin.debug:
+#     var: interface_bridge_port
+#   tags:
+#     - bridge-port
 
 - name: Update bridge port settings
   loop: "{{ hostvars[inventory_hostname]['bridge_port'] }}"

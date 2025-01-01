@@ -1,0 +1,75 @@
+---
+# USW04 specific settings
+bridge_port:
+  - name: sfp1
+    comment: Default Config
+    pvid: 100
+  - name: sfp2
+    comment: Default Config
+    pvid: 110
+  - name: sfp3
+    comment: Default Config
+    pvid: 110
+  - name: sfp4
+    comment: Default Config
+    pvid: 110
+  - name: sfp5
+    comment: Default Config
+    pvid: 110
+  - name: sfp6
+    comment: Default Config
+    pvid: 110
+  - name: sfp7
+    comment: Default Config
+    pvid: 110
+  - name: sfp8
+    comment: Default Config
+    pvid: 110
+  - name: sfp9
+    comment: Default Config
+    pvid: 110
+  - name: sfp10
+    comment: Default Config
+    pvid: 110
+  - name: sfp11
+    comment: Default Config
+    pvid: 110
+  - name: sfp12
+    comment: Default Config
+    pvid: 110
+  - name: sfp13
+    comment: Default Config
+    pvid: 110
+  - name: sfp14
+    comment: Default Config
+    pvid: 110
+  - name: sfp15
+    comment: Default Config
+    pvid: 110
+  - name: sfp16
+    comment: Default Config
+    pvid: 110
+  - name: sfp17
+    comment: Default Config
+    pvid: 110
+  - name: sfp18
+    comment: Default Config
+    pvid: 110
+  - name: sfp19
+    comment: Default Config
+    pvid: 110
+  - name: sfp20
+    comment: Default Config
+    pvid: 110
+  - name: sfp-sfpplus3
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus4
+    comment: Trunk port
+    pvid: 100
+    tagged:
+      - 100
+      - 110
+      - 120
+      - 130
