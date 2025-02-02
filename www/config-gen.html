@@ -95,48 +95,41 @@
     const templates = {
         'CRS326-24S+2Q+': (name,vlan,ip_address,gateway) =>
 `
+/system identity set name=${name}
 /user group add name=ansible policy=read,write,api
-/interface bridge add name=bridge pvid=${vlan}
-/interface vlan add comment=Management interface=bridge name=VLAN100 vlan-id=100
-/interface/bridge/port
-    add bridge=bridge interface=ether1 pvid=${vlan}
-    add bridge=bridge interface=qsfpplus1-1 pvid=${vlan}
-    add bridge=bridge interface=qsfpplus1-2 pvid=${vlan}
-    add bridge=bridge interface=qsfpplus1-3 pvid=${vlan}
-    add bridge=bridge interface=qsfpplus1-4 pvid=${vlan}
-    add bridge=bridge interface=qsfpplus2-1 pvid=${vlan}
-    add bridge=bridge interface=qsfpplus2-2 pvid=${vlan}
-    add bridge=bridge interface=qsfpplus2-3 pvid=${vlan}
-    add bridge=bridge interface=qsfpplus2-4 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus1 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus2 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus3 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus4 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus5 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus6 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus7 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus8 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus9 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus10 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus11 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus12 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus13 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus14 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus15 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus16 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus17 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus18 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus19 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus20 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus21 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus22 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus23 pvid=${vlan}
-    add bridge=bridge interface=sfp-sfpplus24 pvid=${vlan}
-/interface bridge vlan
-    add bridge=bridge comment=Management tagged=bridge,qsfpplus1-1,qsfpplus1-2,qsfpplus1-3,qsfpplus1-4,qsfpplus2-1,qsfpplus2-2,qsfpplus2-3,qsfpplus2-4,sfp-sfpplus1,sfp-sfpplus2,sfp-sfpplus3,sfp-sfpplus4,sfp-sfpplus5,sfp-sfpplus6,sfp-sfpplus7,sfp-sfpplus8,sfp-sfpplus9,sfp-sfpplus10,sfp-sfpplus11,sfp-sfpplus12,sfp-sfpplus13,sfp-sfpplus14,sfp-sfpplus15,sfp-sfpplus16,sfp-sfpplus17,sfp-sfpplus18,sfp-sfpplus19,sfp-sfpplus20,sfp-sfpplus21,sfp-sfpplus22,sfp-sfpplus23,sfp-sfpplus24 vlan-ids=100
-    
+/interface bridge add name=bridge pvid=${vlan} comment=Management
+/interface vlan add comment=Management interface=bridge name=VLAN${vlan} vlan-id=${vlan}
+/ip address add address=${ip_address} interface=VLAN${vlan}
+/ip route add dst-address=0.0.0.0/0 gateway=${gateway}
+
+:foreach i in=[ /interface ethernet find where name~"sfp" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i comment="" }
+
+:foreach i in=[ /interface ethernet find where name~"ether" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i  comment="" }
+
+/interface bridge vlan add bridge=bridge comment=Management vlan-ids=${vlan} tagged=bridge,qsfpplus1-1,qsfpplus1-2,qsfpplus1-3,qsfpplus1-4,qsfpplus2-1,qsfpplus2-2,qsfpplus2-3,qsfpplus2-4,sfp-sfpplus1,sfp-sfpplus2,sfp-sfpplus3,sfp-sfpplus4,sfp-sfpplus5,sfp-sfpplus6,sfp-sfpplus7,sfp-sfpplus8,sfp-sfpplus9,sfp-sfpplus10,sfp-sfpplus11,sfp-sfpplus12,sfp-sfpplus13,sfp-sfpplus14,sfp-sfpplus15,sfp-sfpplus16,sfp-sfpplus17,sfp-sfpplus18,sfp-sfpplus19,sfp-sfpplus20,sfp-sfpplus21,sfp-sfpplus22,sfp-sfpplus23,sfp-sfpplus24 
+  
+/interface bridge set [ find name=bridge ] vlan-filtering=yes
 `,
-        intro: (name, age, city) => `Привет, меня зовут ${name}, мне ${age} лет, и я живу в городе ${city}.`,
+        "CRS326-24G-2S+": (name,vlan,ip_address,gateway) =>
+`
+#
+#  RS326-24G-2S+
+#
+/system identity set name=${name}
+/user group add name=ansible policy=read,write,api
+/interface bridge add name=bridge pvid=${vlan} comment=Management
+/interface vlan add comment=Management interface=bridge name=VLAN${vlan} vlan-id=${vlan}
+/ip address add address=${ip_address} interface=VLAN${vlan}
+/ip route add dst-address=0.0.0.0/0 gateway=${gateway}
+
+:foreach i in=[ /interface ethernet find where name~"sfp" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i comment="default" }
+
+:foreach i in=[ /interface ethernet find where name~"ether" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i  comment="default" }
+
+/interface bridge vlan add bridge=bridge comment=Management vlan-ids=${vlan} tagged=bridge,sfp-sfpplus1,sfp-sfpplus2 
+  
+/interface bridge set [ find name=bridge ] vlan-filtering=yes
+`,
         farewell: (name, age, city) => `До свидания, ${name}! Был рад познакомиться.`,
     };
 
