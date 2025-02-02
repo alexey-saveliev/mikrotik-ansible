@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Подстановка значений в шаблон</title>
+    <title>Генератор базовой конфигурации для устройств Mikrotik</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mikrotik.com/img/mtv2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mikrotik.com/img/mtv2/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
@@ -11,7 +13,7 @@
             margin: 20px;
         }
         .container {
-            max-width: 600px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         label {
@@ -75,7 +77,7 @@
         <label for="ip_address">IP адрес:</label>
         <input type="text" id="ip_address" placeholder="Введите IP адрес и маску в формате a.b.c.d/xx">
 
-        <label for="gateway">IP адрес щлюза по умолчанию:</label>
+        <label for="gateway">IP адрес шлюза по умолчанию:</label>
         <input type="text" id="gateway" placeholder="Введите IP адрес шлюза по умолчанию a.b.c.d">
     </div>
     <button onclick="generateOutput()">Сгенерировать конфигурацию</button>
@@ -93,8 +95,11 @@
     // CRS326-24G-2S+
     // CRS309-1G-8S+
     const templates = {
-        'CRS326-24S+2Q+': (name,vlan,ip_address,gateway) =>
+        "CRS326-24S+2Q+": (name,vlan,ip_address,gateway) =>
 `
+#
+#  Model: CRS326-24S+2Q+
+#
 /system identity set name=${name}
 /user group add name=ansible policy=read,write,api
 /interface bridge add name=bridge pvid=${vlan} comment=Management
@@ -102,9 +107,9 @@
 /ip address add address=${ip_address} interface=VLAN${vlan}
 /ip route add dst-address=0.0.0.0/0 gateway=${gateway}
 
-:foreach i in=[ /interface ethernet find where name~"sfp" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i comment="" }
+:foreach i in=[ /interface ethernet find where name~"sfp" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i comment="defconf" }
 
-:foreach i in=[ /interface ethernet find where name~"ether" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i  comment="" }
+:foreach i in=[ /interface ethernet find where name~"ether" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i  comment="defconf" }
 
 /interface bridge vlan add bridge=bridge comment=Management vlan-ids=${vlan} tagged=bridge,qsfpplus1-1,qsfpplus1-2,qsfpplus1-3,qsfpplus1-4,qsfpplus2-1,qsfpplus2-2,qsfpplus2-3,qsfpplus2-4,sfp-sfpplus1,sfp-sfpplus2,sfp-sfpplus3,sfp-sfpplus4,sfp-sfpplus5,sfp-sfpplus6,sfp-sfpplus7,sfp-sfpplus8,sfp-sfpplus9,sfp-sfpplus10,sfp-sfpplus11,sfp-sfpplus12,sfp-sfpplus13,sfp-sfpplus14,sfp-sfpplus15,sfp-sfpplus16,sfp-sfpplus17,sfp-sfpplus18,sfp-sfpplus19,sfp-sfpplus20,sfp-sfpplus21,sfp-sfpplus22,sfp-sfpplus23,sfp-sfpplus24 
   
@@ -113,7 +118,7 @@
         "CRS326-24G-2S+": (name,vlan,ip_address,gateway) =>
 `
 #
-#  RS326-24G-2S+
+#  Model: CRS326-24G-2S+
 #
 /system identity set name=${name}
 /user group add name=ansible policy=read,write,api
@@ -130,16 +135,37 @@
   
 /interface bridge set [ find name=bridge ] vlan-filtering=yes
 `,
-        farewell: (name, age, city) => `До свидания, ${name}! Был рад познакомиться.`,
-    };
+        "CRS309-1G-8S+": (name,vlan,ip_address,gateway) =>
+`
+#
+#  Model: CRS309-1G-8S+
+#
+/system identity set name=${name}
+/user group add name=ansible policy=read,write,api
+/interface bridge add name=bridge pvid=${vlan} comment=Management
+/interface vlan add comment=Management interface=bridge name=VLAN${vlan} vlan-id=${vlan}
+/ip address add address=${ip_address} interface=VLAN${vlan}
+/ip route add dst-address=0.0.0.0/0 gateway=${gateway}
+
+:foreach i in=[ /interface ethernet find where name~"sfp" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i comment="defconf" }
+
+:foreach i in=[ /interface ethernet find where name~"ether" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i  comment="defconf" }
+
+/interface bridge vlan add bridge=bridge comment=Management vlan-ids=${vlan} tagged=bridge,sfp-sfpplus1,sfp-sfpplus2,sfp-sfpplus3,sfp-sfpplus4,sfp-sfpplus5,sfp-sfpplus6,sfp-sfpplus7,sfp-sfpplus8
+  
+/interface bridge set [ find name=bridge ] vlan-filtering=yes
+`
+};
 
     // Функция для сохранения значений в localStorage
     function saveValues() {
+        const template = document.getElementById('template').value;
         const name = document.getElementById('name').value;
         const vlan = document.getElementById('vlan').value;
         const ip_address = document.getElementById('ip_address').value;
         const gateway = document.getElementById('gateway').value;
 
+        localStorage.setItem('savedTemplate', template);
         localStorage.setItem('savedName', name);
         localStorage.setItem('savedVlan', vlan);
         localStorage.setItem('savedIPaddress', ip_address);
@@ -148,11 +174,13 @@
 
     // Функция для загрузки сохраненных значений из localStorage
     function loadValues() {
+        const savedTemplate = localStorage.getItem('savedTemplate');
         const savedName = localStorage.getItem('savedName');
         const savedVlan = localStorage.getItem('savedVlan');
         const savedIPaddress = localStorage.getItem('savedIPaddress');
         const savedGateway = localStorage.getItem('savedGateway');
 
+        if (savedTemplate) document.getElementById('template').value = savedTemplate;
         if (savedName) document.getElementById('name').value = savedName;
         if (savedVlan) document.getElementById('vlan').value = savedVlan;
         if (savedIPaddress) document.getElementById('ip_address').value = savedIPaddress;
