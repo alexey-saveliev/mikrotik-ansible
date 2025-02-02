@@ -209,6 +209,6 @@
 
       }}      
     values:
-      tagged: "{{ hostvars[inventory_hostname]['bridge_port'] | selectattr ('tagged','defined') | selectattr ('tagged','contains',item.vlanid) | map(attribute='name') | join(',') }}"
+      tagged: "bridge,{{ hostvars[inventory_hostname]['bridge_port'] | selectattr ('tagged','defined') | selectattr ('tagged','contains',item.vlanid) | map(attribute='name') | join(',') }}"
   tags:
     - bridge-port
