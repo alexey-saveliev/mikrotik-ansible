@@ -2,7 +2,28 @@
 
 ros7:
   hosts:
-    UR02:
-      address: 192.168.100.2
-    USW04:
+    # UR02:
+    #   address: 192.168.100.2
+    USW01:
       address: 192.168.100.4
+    USW1A:
+      address: 192.168.100.12
+    USW1C:
+      address: 192.168.100.11
+    USW1D:
+      address: 192.168.100.13
+    USW2A:
+      address: 192.168.100.21
+    USW2D:
+      address: 192.168.100.23
+    USW2H:
+      address: 192.168.100.22
+    USW3A:
+      address: 192.168.100.31
+    USW4C:
+      address: 192.168.100.41
+    USW4D:
+      address: 192.168.100.42
+
+    # USW04:
+    #   address: 192.168.100.123

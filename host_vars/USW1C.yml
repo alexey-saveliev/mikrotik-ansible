@@ -1,0 +1,87 @@
+---
+# USW1C specific settings
+bridge_port:
+  - name: ether1
+    comment: Ansible Host
+    pvid: 100
+  - name: ether2
+    comment: Default Config
+    pvid: 110
+  - name: ether3
+    comment: Default Config
+    pvid: 110
+  - name: ether4
+    comment: Default Config
+    pvid: 110
+  - name: ether5
+    comment: Default Config
+    pvid: 110
+  - name: ether6
+    comment: Default Config
+    pvid: 110
+  - name: ether7
+    comment: Default Config
+    pvid: 110
+  - name: ether8
+    comment: Default Config
+    pvid: 110
+  - name: ether9
+    comment: Default Config
+    pvid: 110
+  - name: ether10
+    comment: Default Config
+    pvid: 110
+  - name: ether11
+    comment: Default Config
+    pvid: 110
+  - name: ether12
+    comment: Default Config
+    pvid: 110
+  - name: ether13
+    comment: Ansible Host
+    pvid: 100
+  - name: ether14
+    comment: Default Config
+    pvid: 110
+  - name: ether15
+    comment: Default Config
+    pvid: 110
+  - name: ether16
+    comment: Default Config
+    pvid: 110
+  - name: ether17
+    comment: Default Config
+    pvid: 110
+  - name: ether18
+    comment: Default Config
+    pvid: 110
+  - name: ether19
+    comment: Default Config
+    pvid: 110
+  - name: ether20
+    comment: Default Config
+    pvid: 110
+  - name: ether21
+    comment: Default Config
+    pvid: 110
+  - name: ether22
+    comment: Default Config
+    pvid: 110
+  - name: ether23
+    comment: Default Config
+    pvid: 110
+  - name: ether24
+    comment: Default Config
+    pvid: 110
+  - name: sfp-sfpplus1
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus2
+    comment: Trunk port
+    pvid: 100
+    tagged:
+      - 100
+      - 110
+      - 120
+      - 130
