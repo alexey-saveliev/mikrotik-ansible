@@ -1,0 +1,135 @@
+---
+# USW02 specific settings
+bridge_port:
+  - name: qsfpplus1-1
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: qsfpplus1-2
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: qsfpplus1-3
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: qsfpplus1-4
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: qsfpplus2-1
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: qsfpplus2-2
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: qsfpplus2-3
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: qsfpplus2-4
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus1
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus2
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus3
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus4
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus5
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus6
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus7
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus8
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus9
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus10
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus11
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus12
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus13
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus14
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus15
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus16
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus17
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus18
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus19
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus20
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus21
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus22
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus23
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus24
+    comment: Trunk port
+    pvid: 100
+    tagged:
+      - 100
+      - 110
+      - 120
+      - 130

@@ -6,6 +6,8 @@ ros7:
     #   address: 192.168.100.2
     USW01:
       address: 192.168.100.4
+    USW02:
+      address: 192.168.100.5
     USW1A:
       address: 192.168.100.12
     USW1C:
