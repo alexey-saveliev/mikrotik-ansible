@@ -63,6 +63,7 @@
 
     <label for="template">Выберите модель устройства:</label>
     <select id="template">
+        <option value="CRS328-4C-20S-4S+">CRS328-4C-20S-4S+</option>
         <option value="CRS326-24S+2Q+">CRS326-24S+2Q+</option>
         <option value="CRS326-24G-2S+">CRS326-24G-2S+</option>
         <option value="CRS309-1G-8S+">CRS309-1G-8S+</option>
@@ -154,6 +155,26 @@
 :foreach i in=[ /interface ethernet find where name~"ether" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i  comment="defconf" }
 
 /interface bridge vlan add bridge=bridge comment=Management vlan-ids=${vlan} tagged=bridge,sfp-sfpplus1,sfp-sfpplus2,sfp-sfpplus3,sfp-sfpplus4,sfp-sfpplus5,sfp-sfpplus6,sfp-sfpplus7,sfp-sfpplus8
+  
+/interface bridge set [ find name=bridge ] vlan-filtering=yes
+`,
+        "CRS328-4C-20S-4S+": (name,vlan,ip_address,gateway) =>
+`
+#
+#  Model: CRS328-4C-20S-4S+
+#
+/system identity set name=${name}
+/user group add name=ansible policy=read,write,api
+/interface bridge add name=bridge pvid=${vlan} comment=Management
+/interface vlan add comment=Management interface=bridge name=VLAN${vlan} vlan-id=${vlan}
+/ip address add address=${ip_address} interface=VLAN${vlan}
+/ip route add dst-address=0.0.0.0/0 gateway=${gateway}
+
+:foreach i in=[ /interface ethernet find where name~"sfp" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i comment="defconf" }
+
+:foreach i in=[ /interface ethernet find where name~"combo" ] do={ /interface/bridge/port add bridge=bridge pvid=${vlan} interface=$i  comment="defconf" }
+
+/interface bridge vlan add bridge=bridge comment=Management vlan-ids=${vlan} tagged=bridge,sfp-sfpplus1,sfp-sfpplus2,sfp-sfpplus3,sfp-sfpplus4
   
 /interface bridge set [ find name=bridge ] vlan-filtering=yes
 `
