@@ -1,6 +1,6 @@
 ---
 ros_api_user: ansible
-ros_api_password: P@ssw0rd
+ros_api_password: "Fycb,kz!"
 ansible_connection: "ansible.builtin.local"
 
 bridge:
@@ -9,8 +9,8 @@ bridge_vlan:
   - vlanid: 100
     comment: Management
   - vlanid: 110
-    comment: WiFi Access Points
-  - vlanid: 120
     comment: VTZS
-  - vlanid: 130
+  - vlanid: 120
     comment: SKUD
+  - vlanid: 130
+    comment: WiFi Access Points

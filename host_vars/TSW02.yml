@@ -1,0 +1,110 @@
+---
+# TSW02 specific settings
+bridge_port:
+  - name: combo2
+    comment: VTZS server
+    pvid: 10
+  - name: combo3
+    comment: TR01-ether10
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: combo4
+    comment: TR02-ether10
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus1
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus2
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus3
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus4
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp1
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp2
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp3
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp4
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp5
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp6
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp7
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp8
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp9
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp10
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp11
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp12
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp13
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp14
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp15
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp16
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp17
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp18
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp19
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp20
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]

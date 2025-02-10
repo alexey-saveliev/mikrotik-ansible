@@ -1,6 +1,6 @@
 ---
 # Main configuration file
-- hosts: ros7
+- hosts: user-ros7
   gather_facts: false
   
   roles:

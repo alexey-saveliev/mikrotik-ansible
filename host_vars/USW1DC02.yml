@@ -1,0 +1,35 @@
+---
+# USW1DC02 specific settings
+bridge_port:
+  - name: sfp-sfpplus1
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus2
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus3
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus4
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus5
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus6
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus7
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]
+  - name: sfp-sfpplus8
+    comment: Trunk port
+    pvid: 100
+    tagged: [100,110,120,130]

@@ -1,0 +1,26 @@
+---
+ros_api_user: ansible
+ros_api_password: "Fycb,kz!"
+ansible_connection: "ansible.builtin.local"
+
+bridge:
+  name: bridge
+bridge_vlan:
+  - vlanid: 10
+    comment: Management
+  - vlanid: 20
+    comment: VLAN20
+  - vlanid: 30
+    comment: VLAN30
+  - vlanid: 40
+    comment: VLAN40
+  - vlanid: 50
+    comment: VLAN50
+  - vlanid: 60
+    comment: VLAN60
+  - vlanid: 70
+    comment: VLAN70
+  - vlanid: 80
+    comment: VLAN80
+  - vlanid: 90
+    comment: VLAN90

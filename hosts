@@ -1,13 +1,19 @@
 ---
 
-ros7:
+user-ros7:
   hosts:
-    # UR02:
-    #   address: 192.168.100.2
+    UR01:
+      address: 192.168.100.2
+    UR02:
+      address: 192.168.100.3
     USW01:
       address: 192.168.100.4
     USW02:
       address: 192.168.100.5
+    USW1DC01:
+      address: 192.168.100.6
+    USW1DC02:
+      address: 192.168.100.7
     USW1A:
       address: 192.168.100.12
     USW1C:
@@ -27,5 +33,10 @@ ros7:
     USW4D:
       address: 192.168.100.42
 
-    # USW04:
-    #   address: 192.168.100.123
+trans_ros7:
+  hosts:
+    TSW01:
+      address: 192.168.10.4
+    TSW02:
+      address: 192.168.10.5
+    
