@@ -13,4 +13,14 @@ bridge_vlan:
   - vlanid: 120
     comment: SKUD
   - vlanid: 130
-    comment: WiFi Access Points
+    comment: EXPO WiFi USF_EXPO
+  - vlanid: 140
+    comment: SPEAKER WiFi UCF_SPK
+  - vlanid: 150
+    comment: PRESS WiFi UCF_PRESS
+  - vlanid: 160
+    comment: STAB WiFi UCF_STAFF
+  - vlanid: 170
+    comment: PARTNER WiFi UCF_PARTNER
+  - vlanid: 180
+    comment: UniFi Acceess Points
