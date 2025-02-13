@@ -104,7 +104,7 @@
 #  Model: CRS326-24S+2Q+
 #
 /system identity set name=${name}
-/user group add name=ansible policy=read,write,api
+/user group add name=ansible policy=read,write,api,policy
 /interface bridge add name=bridge pvid=${vlan} comment=Management
 /interface vlan add comment=Management interface=bridge name=VLAN${vlan} vlan-id=${vlan}
 /ip address add address=${ip_address} interface=VLAN${vlan}
@@ -124,7 +124,7 @@
 #  Model: CRS326-24G-2S+
 #
 /system identity set name=${name}
-/user group add name=ansible policy=read,write,api
+/user group add name=ansible policy=read,write,api,policy
 /interface bridge add name=bridge pvid=${vlan} comment=Management
 /interface vlan add comment=Management interface=bridge name=VLAN${vlan} vlan-id=${vlan}
 /ip address add address=${ip_address} interface=VLAN${vlan}
@@ -144,7 +144,7 @@
 #  Model: CRS309-1G-8S+
 #
 /system identity set name=${name}
-/user group add name=ansible policy=read,write,api
+/user group add name=ansible policy=read,write,api,policy
 /interface bridge add name=bridge pvid=${vlan} comment=Management
 /interface vlan add comment=Management interface=bridge name=VLAN${vlan} vlan-id=${vlan}
 /ip address add address=${ip_address} interface=VLAN${vlan}
@@ -164,7 +164,7 @@
 #  Model: CRS328-4C-20S-4S+
 #
 /system identity set name=${name}
-/user group add name=ansible policy=read,write,api
+/user group add name=ansible policy=read,write,api,policy
 /interface bridge add name=bridge pvid=${vlan} comment=Management
 /interface vlan add comment=Management interface=bridge name=VLAN${vlan} vlan-id=${vlan}
 /ip address add address=${ip_address} interface=VLAN${vlan}
