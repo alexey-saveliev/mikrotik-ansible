@@ -2,10 +2,10 @@
 
 user-ros7:
   hosts:
-    UR01:
-      address: 192.168.100.2
-    UR02:
-      address: 192.168.100.3
+    # UR01:
+    #   address: 192.168.100.2
+    # UR02:
+    #   address: 192.168.100.3
     USW01:
       address: 192.168.100.4
     USW02:
@@ -26,6 +26,10 @@ user-ros7:
       address: 192.168.100.23
     USW2H:
       address: 192.168.100.22
+    USW2C-EXPO:
+      address: 192.168.100.24
+    USW2D-EXPO:
+      address: 192.168.100.25
     USW3A:
       address: 192.168.100.31
     USW4C:
@@ -39,4 +43,14 @@ trans_ros7:
       address: 192.168.10.4
     TSW02:
       address: 192.168.10.5
+    TSW1A:
+      address: 192.168.10.21
+    TSW2F:
+      address: 192.168.10.22
+    TSW2C:
+      address: 192.168.10.23
+    TSW3M:
+      address: 192.168.10.24
+    TSW3K:
+      address: 192.168.10.25
     
