@@ -4,48 +4,11 @@ bridge_port:
   - name: ether1
     comment: Ansible Host
     pvid: 100
-  - name: ether2
-    comment: Default Config
-    pvid: 110
-  - name: ether3
-    comment: Default Config
-    pvid: 110
-  - name: ether4
-    comment: Default Config
-    pvid: 110
-  - name: ether5
-    comment: Default Config
-    pvid: 110
-  - name: ether6
-    comment: Default Config
-    pvid: 110
-  - name: ether7
-    comment: Default Config
-    pvid: 110
-  - name: ether8
-    comment: Default Config
-    pvid: 110
-  - name: ether9
-    comment: Default Config
-    pvid: 110
-  - name: ether10
-    comment: Default Config
-    pvid: 110
-  - name: ether11
-    comment: Default Config
-    pvid: 110
-  - name: ether12
-    comment: Default Config
-    pvid: 110
   - name: sfp-sfpplus3
     comment: Trunk port
     pvid: 100
-    tagged: [100,110,120,130]
+    tagged: [100,110,120,130,140,150,160.170,180,190]
   - name: sfp-sfpplus4
     comment: Trunk port
     pvid: 100
-    tagged:
-      - 100
-      - 110
-      - 120
-      - 130
+    tagged: [100,110,120,130,140,150,160.170,180,190]
