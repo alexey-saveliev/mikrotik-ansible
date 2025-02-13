@@ -2,32 +2,33 @@
 # USW1C specific settings
 bridge_port:
   - name: ether1
-    comment: Ansible Host
-    pvid: 100
+    comment: A5KREG
+    pvid: 120
   - name: ether2
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether3
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether4
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether5
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether6
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether7
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether8
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether9
-    comment: Default Config
-    pvid: 110
+    comment: Unifi AP 01
+    pvid: 100
+    tagged: [110,120,130,140,150,160,170,180]
   - name: ether10
     comment: Default Config
     pvid: 110
@@ -74,14 +75,10 @@ bridge_port:
     comment: Default Config
     pvid: 110
   - name: sfp-sfpplus1
-    comment: Trunk port
+    comment: USW1DC01 sfpplus4
     pvid: 100
-    tagged: [100,110,120,130]
+    tagged: [100,110,120,130,140,150,160,170,180]
   - name: sfp-sfpplus2
-    comment: Trunk port
+    comment: USW1DC02 sfpplus4
     pvid: 100
-    tagged:
-      - 100
-      - 110
-      - 120
-      - 130
+    tagged: [100,110,120,130,140,150,160,170,180]

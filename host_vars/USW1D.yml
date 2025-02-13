@@ -2,29 +2,29 @@
 # USW1D specific settings
 bridge_port:
   - name: ether1
-    comment: Ansible Host
-    pvid: 100
+    comment: A5KREG
+    pvid: 120
   - name: ether2
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether3
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether4
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether5
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether6
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether7
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether8
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether9
     comment: Default Config
     pvid: 110
