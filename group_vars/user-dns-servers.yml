@@ -1,0 +1,4 @@
+---
+ros_api_user: ansible
+ros_api_password: "Fycb,kz!"
+ansible_connection: "ansible.builtin.local"
