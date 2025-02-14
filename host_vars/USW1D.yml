@@ -26,11 +26,11 @@ bridge_port:
     comment: A5KREG
     pvid: 120
   - name: ether9
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether10
-    comment: Default Config
-    pvid: 110
+    comment: A5KREG
+    pvid: 120
   - name: ether11
     comment: Default Config
     pvid: 110
@@ -68,11 +68,11 @@ bridge_port:
     comment: Default Config
     pvid: 110
   - name: ether23
-    comment: Default Config
-    pvid: 110
+    comment: Stand Alladin or Linza
+    pvid: 130
   - name: ether24
-    comment: Default Config
-    pvid: 110
+    comment: Stand Alladin or Linza
+    pvid: 130
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 100
