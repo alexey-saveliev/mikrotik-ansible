@@ -4,39 +4,39 @@ user-ros7:
   hosts:
     # UR01:
     #   address: 192.168.100.2
-    # UR02:
+    # UR02: # Storm
     #   address: 192.168.100.3
-    USW01:
+    USW01: # Storm
       address: 192.168.100.4
-    USW02:
+    USW02: # Storm
       address: 192.168.100.5
-    USW1DC01:
+    USW1DC01: #storm
       address: 192.168.100.6
-    USW1DC02:
+    USW1DC02: #Storm
       address: 192.168.100.7
-    USW1A:
+    USW1A: #Storm
       address: 192.168.100.12
-    USW1C:
+    USW1C: #Strom
       address: 192.168.100.11
-    USW1D:
+    USW1D: # Storm
       address: 192.168.100.13
-    USW2A:
+    USW1E: # Storm
+      address: 192.168.100.14
+    USW2A: # Storm
       address: 192.168.100.21
-    USW2D:
+    USW2D: # Storm
       address: 192.168.100.23
-    USW2KASPER:
-      address: 192.168.100.24
-    USW2H:
+    USW2KASPER: # Storm
+      address: 192.168.100.26
+    USW2H: # Storm
       address: 192.168.100.22
-    USW2C-EXPO:
+    USW2C-EXPO: # Storm
       address: 192.168.100.24
-    USW2D-EXPO:
+    USW2D-EXPO: # Strom
       address: 192.168.100.25
-    USW3A:
-      address: 192.168.100.31
-    USW4C:
+    USW4C: # Storm
       address: 192.168.100.41
-    USW4D:
+    USW4D: # Storm
       address: 192.168.100.42
 
 trans_ros7:
