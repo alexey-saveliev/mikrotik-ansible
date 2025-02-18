@@ -2,22 +2,22 @@
 # TSW2C specific settings
 bridge_port:
   - name: ether1
-    comment: Ansible Host
+    comment: 2C-B-01
     pvid: 10
   - name: ether2
-    comment: Default Config
+    comment: 2C-B-02
     pvid: 10
   - name: ether3
-    comment: Default Config
+    comment: 2C-B-21
     pvid: 10
   - name: ether4
-    comment: Default Config
+    comment: 2C-B-22
     pvid: 10
   - name: ether5
-    comment: Default Config
+    comment: 2C-B-03 VTZS
     pvid: 10
   - name: ether6
-    comment: Default Config
+    comment: 2C-B-17 VTZS
     pvid: 10
   - name: ether7
     comment: Default Config
@@ -39,7 +39,7 @@ bridge_port:
     pvid: 10
   - name: ether13
     comment: Ansible Host
-    pvid: 100
+    pvid: 10
   - name: ether14
     comment: Default Config
     pvid: 10

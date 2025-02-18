@@ -26,12 +26,11 @@ bridge_port:
     comment: A5KREG
     pvid: 120
   - name: ether9
-    comment: Unifi AP 01
-    pvid: 100
-    tagged: [110,120,130,140,150,160,170,180]
+    comment: defconf
+    pvid: 130
   - name: ether10
-    comment: Default Config
-    pvid: 110
+    comment: defconf
+    pvid: 130
   - name: ether11
     comment: Default Config
     pvid: 110
@@ -63,11 +62,13 @@ bridge_port:
     comment: Default Config
     pvid: 110
   - name: ether21
-    comment: Default Config
+    comment: USW2C-EXPO ether23
     pvid: 110
+    tagged: [100,110,120,130,140,150,160,170,180]
   - name: ether22
-    comment: Default Config
-    pvid: 110
+    comment: USW2D-EXPO ether24
+    pvid: 100
+    tagged: [100,110,120,130,140,150,160,170,180]
   - name: ether23
     comment: Default Config
     pvid: 110

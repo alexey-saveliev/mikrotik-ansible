@@ -2,11 +2,13 @@
 # USW1A specific settings
 bridge_port:
   - name: ether1
-    comment: Ansible Host
-    pvid: 100
+    comment: 1A-G-07 Prepared for UniFi
+    pvid: 180
+    tagged: [100,110,120,130,140,150,160,170]
   - name: ether2
-    comment: Default Config
-    pvid: 110
+    comment: 1A-G-08 Prepared for UniFi
+    pvid: 180
+    tagged: [100,110,120,130,140,150,160,170]
   - name: ether3
     comment: Default Config
     pvid: 110
@@ -76,12 +78,8 @@ bridge_port:
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 100
-    tagged: [100,110,120,130]
+    tagged: [100,110,120,130,140,150,160,170,180]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 100
-    tagged:
-      - 100
-      - 110
-      - 120
-      - 130
+    tagged: [100,110,120,130,140,150,160,170,180]

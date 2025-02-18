@@ -2,8 +2,9 @@
 # USW2C-EXPO specific settings
 bridge_port:
   - name: ether1
-    comment: defconf
-    pvid: 130
+    comment: U6E01
+    pvid: 180
+    tagged: [100,110,120,130,140,150,160,170]    
   - name: ether2
     comment: Default Config
     pvid: 130
@@ -47,8 +48,9 @@ bridge_port:
     comment: Default Config
     pvid: 130
   - name: ether16
-    comment: Default Config
-    pvid: 130
+    comment: U6E04
+    pvid: 180
+    tagged: [100,110,120,130,140,150,160,170]
   - name: ether17
     comment: Default Config
     pvid: 130

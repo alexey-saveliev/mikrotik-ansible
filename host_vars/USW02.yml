@@ -62,7 +62,7 @@ bridge_port:
     pvid: 100
     tagged: [100,110,120,130,140,150,160,170,180]
   - name: sfp-sfpplus8
-    comment: Trunk port
+    comment: USW1E
     pvid: 100
     tagged: [100,110,120,130,140,150,160,170,180]
   - name: sfp-sfpplus9
@@ -118,9 +118,8 @@ bridge_port:
     pvid: 100
     tagged: [100,110,120,130,140,150,160,170,180]
   - name: sfp-sfpplus22
-    comment: Trunk port
-    pvid: 100
-    tagged: [100,110,120,130,140,150,160,170,180]
+    comment: 1F Zubarev Keenetic Gigas
+    pvid: 140
   - name: sfp-sfpplus23
     comment: Mediaconverter 3R Room 3.1
     pvid: 100

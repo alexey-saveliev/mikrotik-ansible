@@ -26,9 +26,8 @@ bridge_port:
     pvid: 100
     tagged: [100,110,120,130,140,150,160,170,180]
   - name: sfp-sfpplus7
-    comment: Trunk port
-    pvid: 100
-    tagged: [100,110,120,130,140,150,160,170,180]
+    comment: Mediaconverter 2B
+    pvid: 140
   - name: sfp-sfpplus8
     comment: Trunk port
     pvid: 100

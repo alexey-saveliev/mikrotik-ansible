@@ -44,10 +44,10 @@ bridge_port:
     comment: Default Config
     pvid: 110
   - name: ether15
-    comment: Default Config
+    comment: 1D-C-15 VTZS
     pvid: 110
   - name: ether16
-    comment: Default Config
+    comment: VTZS 1-st Floor Chillout
     pvid: 110
   - name: ether17
     comment: Default Config
@@ -62,16 +62,18 @@ bridge_port:
     comment: Default Config
     pvid: 110
   - name: ether21
-    comment: Default Config
-    pvid: 110
+    comment: USW2C-EXPO ether23 
+    pvid: 100
+    tagged: [100,110,120,130,140,150,160,170,180]
   - name: ether22
-    comment: Default Config
-    pvid: 110
+    comment: USW2D-EXPO ether24
+    tagged: [100,110,120,130,140,150,160,170,180]
+    pvid: 100
   - name: ether23
-    comment: Stand Alladin or Linza
+    comment: Stand Alladin
     pvid: 130
   - name: ether24
-    comment: Stand Alladin or Linza
+    comment: Stand Linza
     pvid: 130
   - name: sfp-sfpplus1
     comment: Trunk port

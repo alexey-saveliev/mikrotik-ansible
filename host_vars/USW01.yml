@@ -62,7 +62,7 @@ bridge_port:
     pvid: 100
     tagged: [100,110,120,130,140,150,160,170,180]
   - name: sfp-sfpplus8
-    comment: Trunk port
+    comment: USW1E
     pvid: 100
     tagged: [100,110,120,130,140,150,160,170,180]
   - name: sfp-sfpplus9
@@ -114,13 +114,11 @@ bridge_port:
     pvid: 100
     tagged: [100,110,120,130,140,150,160,170,180]
   - name: sfp-sfpplus21
-    comment: Trunk port
-    pvid: 100
-    tagged: [100,110,120,130,140,150,160,170,180]
+    comment: Mediaconverter 1B-E-24 SKUD VIP Lunch Hall
+    pvid: 120
   - name: sfp-sfpplus22
-    comment: Trunk port
-    pvid: 100
-    tagged: [100,110,120,130,140,150,160,170,180]
+    comment: Mediaconverter 3G Room 3.5 Speakers Room 2
+    pvid: 140
   - name: sfp-sfpplus23
     comment: Mediaconverter 3H Room 3.6
     pvid: 100

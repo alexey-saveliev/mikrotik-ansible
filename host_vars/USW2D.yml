@@ -2,11 +2,12 @@
 # USW2D specific settings
 bridge_port:
   - name: ether1
-    comment: 2D-B-1
-    pvid: 130
+    comment: 2D-B-1 Main Stage U6E05
+    pvid: 180
+    tagged: [100,110,120,130,140,150,160,170]
   - name: ether2
-    comment: 2D-B-2
-    pvid: 130
+    comment: 2D-B-2 Main Stage
+    pvid: 140
   - name: ether3
     comment: 2D-B-3 USW2KASPER
     pvid: 130
@@ -16,17 +17,19 @@ bridge_port:
     pvid: 130
     tagged: [100,110,120,130,140,150,160,170,180]
   - name: ether5
-    comment: Default Config
-    pvid: 130
+    comment: 2D-B-17 Unifi U6E03
+    pvid: 180
+    tagged: [100,110,120,130,140,150,160,170]
   - name: ether6
-    comment: Default Config
-    pvid: 130
+    comment: 2D-B-18 TP-Link Switch
+    pvid: 150
   - name: ether7
     comment: Default Config
     pvid: 130
   - name: ether8
-    comment: Default Config
-    pvid: 130
+    comment: 2D-B-05
+    pvid: 100
+    tagged: [100,110,120,130,140,150,160,170,180]
   - name: ether9
     comment: Default Config
     pvid: 130
@@ -40,8 +43,8 @@ bridge_port:
     comment: Default Config
     pvid: 130
   - name: ether13
-    comment: Ansible Host
-    pvid: 130
+    comment: VTZS
+    pvid: 110
   - name: ether14
     comment: Default Config
     pvid: 130

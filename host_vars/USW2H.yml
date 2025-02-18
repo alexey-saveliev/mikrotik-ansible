@@ -2,77 +2,77 @@
 # USW2H specific settings
 bridge_port:
   - name: ether1
-    comment: Ansible Host
-    pvid: 100
+    comment: 2H-C-07
+    pvid: 170
   - name: ether2
-    comment: Default Config
-    pvid: 110
+    comment: 2H-C-08
+    pvid: 170
   - name: ether3
-    comment: Default Config
-    pvid: 110
+    comment: 2H-C-11
+    pvid: 170
   - name: ether4
-    comment: Default Config
-    pvid: 110
+    comment: 2H-C-12
+    pvid: 170
   - name: ether5
-    comment: Default Config
-    pvid: 110
+    comment: 2H-C-02 Keenetic Giga
+    pvid: 170
   - name: ether6
-    comment: Default Config
-    pvid: 110
+    comment: 2H-C-03
+    pvid: 170
   - name: ether7
-    comment: Default Config
-    pvid: 110
+    comment: 2H-B-13 Broken
+    pvid: 170
   - name: ether8
-    comment: Default Config
-    pvid: 110
+    comment: 2H-B-14 Broken
+    pvid: 170
   - name: ether9
-    comment: Default Config
-    pvid: 110
+    comment: 2H-B-01
+    pvid: 170
   - name: ether10
-    comment: Default Config
-    pvid: 110
+    comment: 2H-B-02
+    pvid: 170
   - name: ether11
-    comment: Default Config
-    pvid: 110
+    comment: 2H-B-08
+    pvid: 170
   - name: ether12
-    comment: Default Config
-    pvid: 110
+    comment: 2H-B-09
+    pvid: 170
   - name: ether13
-    comment: Ansible Host
-    pvid: 100
+    comment: 2H-D-07 Keenetic Speedster
+    pvid: 170
   - name: ether14
-    comment: Default Config
-    pvid: 110
+    comment: 2H-D-11
+    pvid: 170
   - name: ether15
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: ether16
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: ether17
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: ether18
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: ether19
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: ether20
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: ether21
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: ether22
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: ether23
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: ether24
     comment: Default Config
-    pvid: 110
+    pvid: 170
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 100
