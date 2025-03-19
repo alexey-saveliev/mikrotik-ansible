@@ -5,13 +5,140 @@
   
   roles:
     - ros7_switch
+  tasks:
+  - name: Set DNS servers
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: ip dns
+      data:      
+        - servers: "192.168.100.2,192.168.100.3"
+  - name: Set NTP server
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: system ntp client servers
+      data:      
+        - address: "pool.ntp.org"
 
-# - hosts: ros7
-#   tasks:
-#     - name: Display all variables/facts known for a host
-#       debug:
-#         var: hostvars[inventory_hostname]
-#       tags: debug_info
+  - name: Enable NTP client
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: system ntp client
+      data:      
+        - enabled: "yes"
+
+  - name: Add prometheus access group
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: user group
+      data:      
+        - name: "prometheus"
+          policy: "read,api"
+    tags: prometheus
+  
+  - name: Add prometheus user
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: user
+      data:      
+        - name: "prometheus"
+          group: "prometheus"
+          password: "Gh0vtntq"
+    tags: prometheus
+# "/interface ethernet switch port set [find switch =switch1 ] limit-unknown-multicasts=yes limit-unknown-unicasts=yes storm-rate=10"
+  - name: Print switch port settings
+    community.routeros.api_info:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: interface ethernet switch port
+    register: interface_ethernet_switch_port
+    tags: storm
+  - name: Print switch port settings
+    ansible.builtin.debug:
+      var: interface_ethernet_switch_port
+    tags: storm
+  # - name: Set storm rate
+  #   community.routeros.api_modify:
+  #     hostname: "{{ address }}"
+  #     password: "{{ ros_api_password }}"
+  #     username: "{{ ros_api_user }}"
+  #     path: interface ethernet switch port
+  #     data:
+  #       - limit-unknown-multicasts: yes
+  #         limit-unknown-unicasts: yes
+  #         storm-rate: 10
+  #     restrict:
+  #       - field: switch
+  #         values:
+  #           - switch1
+  #   tags: storm 
+    
+- hosts: user-dns-servers
+  tasks:
+    - name: DNS Serever - Add A records
+      community.routeros.api_modify:
+        hostname: "{{ address }}"
+        password: "{{ ros_api_password }}"
+        username: "{{ ros_api_user }}"
+        path: ip dns static
+        data:
+          - name: UR01
+            address: 192.168.100.2
+          - name: UR02
+            address: 192.168.100.3
+          - name: USW01
+            address: 192.168.100.4
+          - name: USW02
+            address: 192.168.100.5
+          - name: USW1DC01
+            address: 192.168.100.6
+          - name: USW1DC02
+            address: 192.168.100.7
+          - name: USW1C
+            address: 192.168.100.11
+          - name: USW1A
+            address: 192.168.100.12
+          - name: USW1D
+            address: 192.168.100.13
+          - name: USW1E
+            address: 192.168.100.14
+          - name: USW2A
+            address: 192.168.100.21
+          - name: USW2D
+            address: 192.168.100.23
+          - name: USW2H
+            address: 192.168.100.22
+          - name: USW2C-EXPO
+            address: 192.168.100.24
+          - name: USW2D-EXPO
+            address: 192.168.100.25
+          - name: USW2KASPER
+            address: 192.168.100.26
+          - name: USW3A
+            address: 192.168.100.31
+          - name: USW4C
+            address: 192.168.100.41
+          - name: USW4D
+            address: 192.168.100.42
+          - name: tv.finevid.link
+            address: 192.168.110.55
+          - name: fincert
+            address: 192.168.130.57
+            ttl: 60s
+          - name: fincert2.uralcyberfin.ru
+            address: 192.168.130.57
+            ttl: 60s
+      tags: dns
 
     
 

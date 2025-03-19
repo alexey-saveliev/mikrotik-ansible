@@ -5,7 +5,63 @@
   
   roles:
     - ros7_switch
+  tasks:
+  - name: Set DNS servers
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: ip dns
+      data:      
+        - servers: "192.168.10.2,192.168.10.3"
+  - name: Set NTP server
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: system ntp client servers
+      data:      
+        - address: "pool.ntp.org"
 
+  - name: Enable NTP client
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: system ntp client
+      data:      
+        - enabled: "yes"
+
+  - name: Add prometheus access group
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: user group
+      data:      
+        - name: "prometheus"
+          policy: "read,api"
+    tags: prometheus
+  
+  - name: Add prometheus user
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: user
+      data:      
+        - name: "prometheus"
+          group: "prometheus"
+          password: "Gh0vtntq"
+    tags: prometheus
+  - name: Set storm rate
+    community.routeros.command:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      commands:
+        - "/interface ethernet switch port set [find switch =switch1 ] limit-unknown-multicasts=yes limit-unknown-unicasts=yes storm-rate=10"
+    tags: storm 
 # - hosts: ros7
 #   tasks:
 #     - name: Display all variables/facts known for a host
