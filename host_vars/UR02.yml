@@ -1,5 +1,19 @@
 ---
-# UR01 specific settings
+# UR02 specific settings
+
+dhcp_server:
+  - name: VLAN100
+    interface: "VLAN100"
+    network: "10.100.0.0/16"
+    dns: "10.100.0.2,10.100.0.3"
+    default_gateway: "10.100.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN100
+      ranges:
+        - "10.100.0.65-10.100.127.255"
+#          - "10.100.128.0-10.100.255.254"
+
 bridge_port:
   - name: ether1
     comment: Ansible Host

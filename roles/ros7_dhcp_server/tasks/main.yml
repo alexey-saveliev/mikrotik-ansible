@@ -1,0 +1,73 @@
+---
+# - name: Check if interface exists
+#   community.routeros.api_info:
+#     hostname: "{{ address }}"
+#     username: "{{ ros_api_user }}"
+#     password: "{{ ros_api_password }}"
+#     path: "interface vlan"
+#   register: interface_check
+#   loop: "{{ dhcp_server }}"
+
+# - name: Fail if interface does not exist
+#   ansible.builtin.fail:
+#     msg: "Interface {{ item.interface }} does not exist on {{ address }}"
+#   when: interface_check.results[ansible_loop.index0].result | length == 0
+#   loop: "{{ dhcp_server }}"
+#   loop_control:
+#     index_var: ansible_loop
+
+- name: Create DHCP address pool
+  community.routeros.api_modify:
+    hostname: "{{ address }}"
+    password: "{{ ros_api_password }}"
+    username: "{{ ros_api_user }}"
+    path: "ip pool"
+    data:
+      - name: "{{ item.pool.name }}"
+        ranges: "{{ item.pool.ranges | join(',') }}"
+  loop: "{{ dhcp_server }}"
+  tags: pool
+
+
+
+- name: Configure DHCP network options
+  community.routeros.api_modify:
+    hostname: "{{ address }}"
+    username: "{{ ros_api_user }}"
+    password: "{{ ros_api_password }}"
+    path: "ip dhcp-server network"
+    data:
+      - address: "{{ item.network }}"
+        gateway: "{{ item.default_gateway }}"
+        dns-server: "{{ item.dns }}"
+  loop: "{{ dhcp_server }}"
+  tags: network
+
+- name: Get DHCP servers list
+  community.routeros.api_info:
+    hostname: "{{ address }}"
+    username: "{{ ros_api_user }}"
+    password: "{{ ros_api_password }}"
+    path: "ip dhcp-server"
+  register: dhcp_servers_list
+
+- name: Print dhcp_servers_list
+  ansible.builtin.debug:
+    var: dhcp_servers_list
+
+
+
+# - name: Configure DHCP server
+#   community.routeros.api_modify:
+#     hostname: "{{ address }}"
+#     username: "{{ ros_api_user }}"
+#     password: "{{ ros_api_password }}"
+#     path: "ip dhcp-server"
+#     data:
+#       - name: "{{ item.name }}"
+#         interface: "{{ item.interface }}"
+#         address-pool: "{{ item.pool.name }}"
+#         lease-time: "{{ item.lease_time }}"
+#   when: dhcp_servers_list | selectattr("name","equalto","{{ item.name }}") | list | length == 0
+#   loop: "{{ dhcp_server }}"
+#   tags: server
