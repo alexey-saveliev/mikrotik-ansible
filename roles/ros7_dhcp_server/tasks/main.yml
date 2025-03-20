@@ -1,21 +1,4 @@
 ---
-# - name: Check if interface exists
-#   community.routeros.api_info:
-#     hostname: "{{ address }}"
-#     username: "{{ ros_api_user }}"
-#     password: "{{ ros_api_password }}"
-#     path: "interface vlan"
-#   register: interface_check
-#   loop: "{{ dhcp_server }}"
-
-# - name: Fail if interface does not exist
-#   ansible.builtin.fail:
-#     msg: "Interface {{ item.interface }} does not exist on {{ address }}"
-#   when: interface_check.results[ansible_loop.index0].result | length == 0
-#   loop: "{{ dhcp_server }}"
-#   loop_control:
-#     index_var: ansible_loop
-
 - name: Create DHCP address pool
   community.routeros.api_modify:
     hostname: "{{ address }}"
@@ -55,19 +38,34 @@
   ansible.builtin.debug:
     var: dhcp_servers_list
 
+- name: Modify DHCP server
+  community.routeros.api_find_and_modify:
+    hostname: "{{ address }}"
+    username: "{{ ros_api_user }}"
+    password: "{{ ros_api_password }}"
+    path: "ip dhcp-server"
+    find:
+      interface: "{{ item.interface }}"
+    values:
+      name: "{{ item.name }}"
+      interface: "{{ item.interface }}"
+      address-pool: "{{ item.pool.name }}"
+      lease-time: "{{ item.lease_time }}"
+  when: dhcp_servers_list.result | selectattr("interface","equalto",item.interface) | list | length != 0
+  loop: "{{ dhcp_server }}"
+  tags: server
 
-
-# - name: Configure DHCP server
-#   community.routeros.api_modify:
-#     hostname: "{{ address }}"
-#     username: "{{ ros_api_user }}"
-#     password: "{{ ros_api_password }}"
-#     path: "ip dhcp-server"
-#     data:
-#       - name: "{{ item.name }}"
-#         interface: "{{ item.interface }}"
-#         address-pool: "{{ item.pool.name }}"
-#         lease-time: "{{ item.lease_time }}"
-#   when: dhcp_servers_list | selectattr("name","equalto","{{ item.name }}") | list | length == 0
-#   loop: "{{ dhcp_server }}"
-#   tags: server
+- name: Create DHCP server
+  community.routeros.api_modify:
+    hostname: "{{ address }}"
+    username: "{{ ros_api_user }}"
+    password: "{{ ros_api_password }}"
+    path: "ip dhcp-server"
+    data:
+      - name: "{{ item.name }}"
+        interface: "{{ item.interface }}"
+        address-pool: "{{ item.pool.name }}"
+        lease-time: "{{ item.lease_time }}"
+  when: dhcp_servers_list.result | selectattr("interface","equalto",item.interface) | list | length == 0
+  loop: "{{ dhcp_server }}"
+  tags: server
