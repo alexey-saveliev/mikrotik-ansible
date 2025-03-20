@@ -4,8 +4,8 @@ user-ros7:
   hosts:
     # UR01:
     #   address: 192.168.100.2
-    # UR02: # Storm
-    #   address: 192.168.100.3
+    UR02: # Storm
+      address: 10.110.0.2
     USW01: # Storm
       address: 192.168.100.4
     USW02: # Storm
@@ -55,10 +55,17 @@ trans_ros7:
       address: 192.168.10.24
     TSW3K:
       address: 192.168.10.25
-    
+
+user-dhcp-servers:
+  hosts:
+    UR02:
+      address: 10.110.0.2
+    # UR03:
+    #   address: 192.168.100.3
+
 user-dns-servers:
   hosts:
-    UR01:
-      address: 192.168.100.2
     UR02:
+      address: 10.110.0.2
+    UR03:
       address: 192.168.100.3

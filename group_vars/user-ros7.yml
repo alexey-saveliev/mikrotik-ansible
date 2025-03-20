@@ -6,10 +6,8 @@ ansible_connection: "ansible.builtin.local"
 bridge:
   name: bridge
 bridge_vlan:
-  - vlanid: 100
-    comment: Management
   - vlanid: 110
-    comment: VTZS
+    comment: Management
   - vlanid: 120
     comment: SKUD
   - vlanid: 130
