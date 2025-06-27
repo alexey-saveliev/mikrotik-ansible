@@ -1,0 +1,128 @@
+---
+# SW01 specific settings
+bridge_port:
+  - name: qsfpplus1-1
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus1-2
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus1-3
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus1-4
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus2-1
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus2-2
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus2-3
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus2-4
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus1
+    comment: R01
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus2
+    comment: R02
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus3
+    comment: USWKOT
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus4
+    comment: USWANG
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus5
+    comment: ANGAR TRANS Main
+    pvid: 10
+  - name: sfp-sfpplus6
+    comment: KOTELNAYA TRANS Main
+    pvid: 10
+  - name: sfp-sfpplus7
+    comment: USWSM
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus8
+    comment: SimpleMusic TRANS Main
+    pvid: 10
+  - name: sfp-sfpplus9
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus10
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus11
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus12
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus13
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus14
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus15
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus16
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus17
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus18
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus19
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus20
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus21
+    comment: USWB02
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus22
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus23
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus24
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]

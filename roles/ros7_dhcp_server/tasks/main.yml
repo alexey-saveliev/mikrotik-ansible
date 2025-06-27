@@ -11,8 +11,6 @@
   loop: "{{ dhcp_server }}"
   tags: pool
 
-
-
 - name: Configure DHCP network options
   community.routeros.api_modify:
     hostname: "{{ address }}"

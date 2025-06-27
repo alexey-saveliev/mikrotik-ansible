@@ -1,0 +1,125 @@
+---
+# Main configuration file
+- hosts: switches-ros7
+  gather_facts: false
+  
+  roles:
+    - ros7_switch
+  tasks:
+  - name: Set DNS servers
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: ip dns
+      data:      
+        - servers: "10.10.0.2,10.10.0.3"
+  - name: Set NTP server
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: system ntp client servers
+      data:      
+        - address: "pool.ntp.org"
+
+  - name: Enable NTP client
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: system ntp client
+      data:      
+        - enabled: "yes"
+
+  - name: Add prometheus access group
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: user group
+      data:      
+        - name: "prometheus"
+          policy: "read,api"
+    tags: prometheus
+  
+  - name: Add prometheus user
+    community.routeros.api_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: user
+      data:      
+        - name: "prometheus"
+          group: "prometheus"
+          password: !vault |
+                    $ANSIBLE_VAULT;1.1;AES256
+                    61616431653639316463613533336234363262343239656665356235396634633364383264623664
+                    3865646165343634303763636562373038666636366534660a623265393438616163643361303638
+                    38616536643263306532343766636633346264363930343863373939336566663965653333313061
+                    3061326439343530620a303135616331616265383265643138613039383963393231616361623062
+                    3937
+    tags: prometheus
+  
+  - name: Get all ethernet interfaces
+    community.routeros.api_info:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: interface ethernet
+    register: interfaces
+    tags: storm
+  
+  - name: Set storm rate
+    community.routeros.api_find_and_modify:
+      hostname: "{{ address }}"
+      password: "{{ ros_api_password }}"
+      username: "{{ ros_api_user }}"
+      path: interface ethernet switch port
+      find:
+        # name: "{{ item.name }}"
+        switch: "switch1"
+      values:        
+        limit-unknown-multicasts: yes
+        limit-unknown-unicasts: yes
+        storm-rate: 5
+    # loop: "{{ interfaces.result }}"
+
+
+- hosts: dhcp-servers
+  gather_facts: false
+  
+  roles:
+    - ros7_dhcp_server
+
+- hosts: dns-servers
+  tasks:
+    - name: DNS Serever - Add A records
+      community.routeros.api_modify:
+        hostname: "{{ address }}"
+        password: "{{ ros_api_password }}"
+        username: "{{ ros_api_user }}"
+        path: ip dns static
+        data:
+          - name: R01
+            address: 10.10.0.2
+          - name: R02
+            address: 10.10.0.3
+          - name: SW01
+            address: 10.10.0.4
+          - name: SW02
+            address: 10.10.0.5
+          - name: fincert2.uralcyberfin.ru
+            address: 192.168.130.57
+            ttl: 60s
+          - name: monitor
+            address: 10.10.0.10
+            ttl: 60s
+          - name: p05
+            address: 10.10.0.10
+            ttl: 60s
+      tags: dns
+
+    
+
+    

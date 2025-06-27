@@ -1,0 +1,107 @@
+---
+# UR02 specific settings
+
+dhcp_server:
+  - name: VLAN10
+    interface: "VLAN10"
+    network: "10.10.0.0/16"
+    dns: "10.10.0.2,10.10.0.3"
+    default_gateway: "10.10.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN10
+      ranges:
+        - "10.10.128.0-10.10.255.254"
+  - name: VLAN20
+    interface: "VLAN20"
+    network: "10.20.0.0/16"
+    dns: "10.20.0.2,10.20.0.3"
+    default_gateway: "10.20.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN20
+      ranges:
+        - "10.20.128.0-10.20.255.254"
+  - name: VLAN30
+    interface: "VLAN30"
+    network: "10.30.0.0/16"
+    dns: "10.30.0.2,10.30.0.3"
+    default_gateway: "10.30.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN30
+      ranges:
+        - "10.30.128.0-10.30.255.254"
+  - name: VLAN40
+    interface: "VLAN40"
+    network: "10.40.0.0/16"
+    dns: "10.40.0.2,10.40.0.3"
+    default_gateway: "10.40.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN40
+      ranges:
+        - "10.40.128.0-10.40.255.254"
+  - name: VLAN50
+    interface: "VLAN50"
+    network: "10.50.0.0/16"
+    dns: "10.50.0.2,10.50.0.3"
+    default_gateway: "10.50.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN50
+      ranges:
+        - "10.50.128.0-10.50.255.254"
+  - name: VLAN60
+    interface: "VLAN60"
+    network: "10.60.0.0/16"
+    dns: "10.60.0.2,10.60.0.3"
+    default_gateway: "10.60.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN60
+      ranges:
+        - "10.60.128.0-10.60.255.254"
+  - name: VLAN70
+    interface: "VLAN70"
+    network: "10.70.0.0/16"
+    dns: "10.70.0.2,10.70.0.3"
+    default_gateway: "10.70.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN70
+      ranges:
+        - "10.70.128.0-10.70.255.254"
+  - name: VLAN80
+    interface: "VLAN80"
+    network: "10.80.0.0/16"
+    dns: "10.80.0.2,10.80.0.3"
+    default_gateway: "10.80.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN80
+      ranges:
+        - "10.80.128.0-10.80.255.254"
+  - name: VLAN90
+    interface: "VLAN90"
+    network: "10.90.0.0/16"
+    dns: "77.88.8.8,77.88.8.1"
+    default_gateway: "10.90.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN90
+      ranges:
+        - "10.90.128.0-10.90.255.254"
+
+bridge_port:
+  - name: ether1
+    comment: VTZS P02
+    pvid: 10
+  - name: sfp-sfpplus3
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus4
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
