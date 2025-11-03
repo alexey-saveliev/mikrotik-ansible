@@ -94,7 +94,16 @@
 
 - hosts: dns-servers
   tasks:
-    - name: DNS Serever - Add A records
+    # - name: Get all static DNS records
+    #   community.routeros.api_info:
+    #   hostname: "{{ address }}"
+    #   password: "{{ ros_api_password }}"
+    #   username: "{{ ros_api_user }}"
+    #   path: ip dns static
+    #   register: dnsrr
+    #   tags: dns
+    
+    - name: DNS Server - Add A records
       community.routeros.api_modify:
         hostname: "{{ address }}"
         password: "{{ ros_api_password }}"
@@ -105,19 +114,49 @@
             address: 10.10.0.2
           - name: R02
             address: 10.10.0.3
-          - name: SW01
+          - name: SWG01
             address: 10.10.0.4
-          - name: SW02
+          - name: SWG02
             address: 10.10.0.5
-          - name: fincert2.uralcyberfin.ru
-            address: 192.168.130.57
-            ttl: 60s
-          - name: monitor
-            address: 10.10.0.10
-            ttl: 60s
-          - name: p05
-            address: 10.10.0.10
-            ttl: 60s
+          - name: SWE01
+            address: 10.10.0.6
+          - name: SWE02
+            address: 10.10.0.7
+          - name: USWG3A
+            address: 10.10.0.38
+          - name: USWG1B
+            address: 10.10.0.12          
+          - name: USWG2A
+            address: 10.10.0.21
+          - name: USWG3B
+            address: 10.10.0.32
+          - name: USWG4A
+            address: 10.10.0.41
+          - name: USWG4B
+            address: 10.10.0.42
+          - name: USWG5A
+            address: 10.10.0.51
+          - name: USWG5B
+            address: 10.10.0.52
+          - name: USWG7A
+            address: 10.10.0.71
+          - name: USWG7B
+            address: 10.10.0.72
+          - name: USWGBKZ
+            address: 10.10.0.39
+          - name: USWE31
+            address: 10.10.0.31
+          - name: USWE-1
+            address: 10.10.0.11
+          - name: USWE33
+            address: 10.10.0.33
+          - name: USWE34
+            address: 10.10.0.34
+          - name: USWEGA01
+            address: 10.10.0.14
+          - name: USWEGA02
+            address: 10.10.0.15
+          
       tags: dns
 
     
