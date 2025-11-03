@@ -1,0 +1,84 @@
+---
+# USWG3B specific settings
+bridge_port:
+  - name: ether1
+    comment: Default Config
+    pvid: 70
+  - name: ether2
+    comment: Default Config
+    pvid: 70
+  - name: ether3
+    comment: Default Config
+    pvid: 70
+  - name: ether4
+    comment: Default Config
+    pvid: 70
+  - name: ether5
+    comment: Default Config
+    pvid: 70
+  - name: ether6
+    comment: Default Config
+    pvid: 70
+  - name: ether7
+    comment: Default Config
+    pvid: 70
+  - name: ether8
+    comment: Default Config
+    pvid: 70
+  - name: ether9
+    comment: Switch at Cloud Stand
+    pvid: 70
+  - name: ether10
+    comment: Default Config
+    pvid: 70
+  - name: ether11
+    comment: Default Config
+    pvid: 70
+  - name: ether12
+    comment: Default Config
+    pvid: 70
+  - name: ether13
+    comment: Default Config
+    pvid: 70
+  - name: ether14
+    comment: Default Config
+    pvid: 70
+  - name: ether15
+    comment: Default Config
+    pvid: 70
+  - name: ether16
+    comment: Default Config
+    pvid: 70
+  - name: ether17
+    comment: Default Config
+    pvid: 70
+  - name: ether18
+    comment: Default Config
+    pvid: 70
+  - name: ether19
+    comment: Default Config
+    pvid: 70
+  - name: ether20
+    comment: Default Config
+    pvid: 70
+  - name: ether21
+    comment: Default Config
+    pvid: 70
+  - name: ether22
+    comment: Default Config
+    pvid: 70
+  - name: ether23
+    comment: Default Config
+    pvid: 70
+  - name: ether24
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus1
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus2
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]

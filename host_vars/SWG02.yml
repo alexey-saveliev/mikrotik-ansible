@@ -1,5 +1,5 @@
 ---
-# SW01 specific settings
+# SW02 specific settings
 bridge_port:
   - name: qsfpplus1-1
     comment: Trunk port
@@ -42,26 +42,27 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus3
-    comment: USWKOT
+    comment: Trunk port
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus4
-    comment: USWANG
+    comment: UTrunk port
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus5
-    comment: ANGAR TRANS Main
+    comment: Trunk port
     pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus6
-    comment: KOTELNAYA TRANS Main
-    pvid: 10
+    comment: Trunk port
+    pvid: 11    
   - name: sfp-sfpplus7
-    comment: USWSM
+    comment: Trunk port
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus8
-    comment: SimpleMusic TRANS Main
-    pvid: 10
+    comment: Trunk port
+    pvid: 11
   - name: sfp-sfpplus9
     comment: Trunk port
     pvid: 10

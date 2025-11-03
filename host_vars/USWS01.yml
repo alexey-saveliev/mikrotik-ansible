@@ -3,52 +3,52 @@
 bridge_port:
   - name: ether1
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether2
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether3
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether4
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether5
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether6
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether7
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether8
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether9
     comment: Switch at Cloud Stand
     pvid: 50
   - name: ether10
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether11
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether12
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether13
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether14
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether15
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether16
     comment: Default Config
-    pvid: 20
+    pvid: 50
   - name: ether17
     comment: Trunk Native VLAN 10
     pvid: 10

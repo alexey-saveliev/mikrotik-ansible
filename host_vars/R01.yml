@@ -1,5 +1,5 @@
 ---
-# UR02 specific settings
+# R01 specific settings
 
 dhcp_server:
   - name: VLAN10
@@ -94,11 +94,8 @@ dhcp_server:
         - "10.90.0.65-10.90.127.255"
 
 bridge_port:
-  - name: ether1
-    comment: VTZS P01
-    pvid: 10
-  - name: ether2
-    comment: Monitoring P05
+  - name: ether12
+    comment: Management
     pvid: 10
   - name: sfp-sfpplus3
     comment: Trunk port

@@ -1,9 +1,9 @@
 ---
-# USWL03 specific settings
+# USWS02 specific settings
 bridge_port:
   - name: ether1
-    comment: VTZS Host ID ???
-    pvid: 10
+    comment: SKUD Back Entrance
+    pvid: 20
   - name: ether2
     comment: Default Config
     pvid: 50

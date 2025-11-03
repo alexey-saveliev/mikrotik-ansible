@@ -1,84 +1,77 @@
 ---
-# USWB02 specific settings
+# USWG3A specific settings
 bridge_port:
   - name: ether1
-    comment: VTZS Server
-    pvid: 10
+    comment: Default Config
+    pvid: 70
   - name: ether2
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether3
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether4
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether5
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether6
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether7
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether8
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether9
-    comment: Default Config
-    pvid: 50
+    comment: Switch at Cloud Stand
+    pvid: 70
   - name: ether10
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether11
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether12
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether13
-    comment: 1-1 Room 7
-    pvid: 30
+    comment: Default Config
+    pvid: 70
   - name: ether14
-    comment: 2-1 Room 4
-    pvid: 30
+    comment: Default Config
+    pvid: 70
   - name: ether15
     comment: Default Config
-    pvid: 50
+    pvid: 70
   - name: ether16
-    comment: Partner Corner at Boilernaya
-    pvid: 90
+    comment: Default Config
+    pvid: 70
   - name: ether17
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 70
   - name: ether18
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 70
   - name: ether19
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 70
   - name: ether20
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 70
   - name: ether21
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 70
   - name: ether22
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 70
   - name: ether23
-    comment: Unifi U7PM40
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 70
   - name: ether24
-    comment: Unifi U7PM41
+    comment: Trunk Native VLAN 10
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus1

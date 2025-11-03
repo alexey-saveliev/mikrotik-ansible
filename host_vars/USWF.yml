@@ -1,33 +1,33 @@
 ---
-# USWKOT specific settings
+# USWREGM specific settings
 bridge_port:
   - name: ether1
-    comment: STR by Silin
-    pvid: 10
+    comment: Default Config
+    pvid: 20
   - name: ether2
     comment: Default Config
-    pvid: 50
+    pvid: 20
   - name: ether3
-    comment: VTZS02 by Silin
-    pvid: 10
+    comment: Default Config
+    pvid: 20
   - name: ether4
     comment: Default Config
-    pvid: 50
+    pvid: 20
   - name: ether5
     comment: Default Config
-    pvid: 50
+    pvid: 20
   - name: ether6
     comment: Default Config
-    pvid: 50
+    pvid: 20
   - name: ether7
     comment: Default Config
-    pvid: 50
+    pvid: 20
   - name: ether8
     comment: Default Config
-    pvid: 50
+    pvid: 20
   - name: ether9
-    comment: Printer
-    pvid: 30
+    comment: Default Config
+    pvid: 50
   - name: ether10
     comment: Default Config
     pvid: 50
@@ -48,7 +48,7 @@ bridge_port:
     pvid: 50
   - name: ether16
     comment: Default Config
-    pvid: 50
+    pvid: 20
   - name: ether17
     comment: Trunk Native VLAN 10
     pvid: 10
@@ -84,8 +84,8 @@ bridge_port:
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90]
