@@ -90,6 +90,14 @@
         <i class="fas fa-copy copy-icon" onclick="copyToClipboard()"></i>
         
     </div>
+
+    <h2>Дополнительные команды</h2>
+    <div class="output" id="additional-output">
+        <pre id="additional-config" style="text-wrap-mode: wrap;">
+/user add group=ansible name=ansible
+        </pre>        
+        <i class="fas fa-copy copy-icon" onclick="copyAdditionalToClipboard()"></i>
+    </div>
 </div>
 
 <script>
@@ -97,6 +105,8 @@
     // CRS326-24S+2Q+
     // CRS326-24G-2S+
     // CRS309-1G-8S+
+    // CRS328-4C-20S-4S+
+    
     const templates = {
         "CRS326-24S+2Q+": (name,vlan,ip_address,gateway) =>
 `
@@ -245,6 +255,18 @@
             })
             .catch(() => {
                 alert('Не удалось скопировать текст.');
+            });
+    }
+
+    // Функция для копирования дополнительных команд в буфер обмена
+    function copyAdditionalToClipboard() {
+        const outputText = document.getElementById('additional-config').textContent;
+        navigator.clipboard.writeText(outputText)
+            .then(() => {
+                alert('Дополнительные команды скопированы в буфер обмена!');
+            })
+            .catch(() => {
+                alert('Не удалось скопировать дополнительные команды.');
             });
     }
 
