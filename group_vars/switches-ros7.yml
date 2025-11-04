@@ -23,18 +23,18 @@ bridge_vlan:
   - vlanid: 11
     comment: Broadcast Backup
   - vlanid: 20
-    comment: SKUD
+    comment: A5KREG
   - vlanid: 30
-    comment: ORG
+    comment: VTZS
   - vlanid: 40
-    comment: PRESS
+    comment: ORG
   - vlanid: 50
     comment: TECH
   - vlanid: 60
-    comment: VIP
+    comment: SPEAKERS
   - vlanid: 70
-    comment: VLAN70
+    comment: EXPO
   - vlanid: 80
-    comment: VLAN80
+    comment: RESERV80
   - vlanid: 90
-    comment: Public WiFi
+    comment: RESERV90
