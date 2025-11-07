@@ -1,10 +1,6 @@
 ---
 # Main configuration file
-- hosts: switches-ros7
-  gather_facts: false
-  
-  roles:
-    - ros7_switch
+- hosts: switches-ros7,!dns-servers
   tasks:
   - name: Set DNS servers
     community.routeros.api_modify:
@@ -14,6 +10,13 @@
       path: ip dns
       data:      
         - servers: "10.10.0.2,10.10.0.3"
+        
+- hosts: switches-ros7
+  gather_facts: false
+  
+  roles:
+    - ros7_switch
+  tasks:
   - name: Set NTP server
     community.routeros.api_modify:
       hostname: "{{ address }}"
