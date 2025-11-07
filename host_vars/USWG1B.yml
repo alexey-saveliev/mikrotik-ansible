@@ -75,10 +75,10 @@ bridge_port:
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus1
-    comment: Trunk port
+    comment: SWG02-sfpplus5
     pvid: 10
     tagged: [10,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus2
-    comment: Trunk port
+    comment: SWG01-sfpplus5
     pvid: 10
     tagged: [10,20,30,40,50,60,70,80,90]
