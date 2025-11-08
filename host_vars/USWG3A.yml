@@ -68,8 +68,8 @@ bridge_port:
     comment: Default Config
     pvid: 70
   - name: ether23
-    comment: Default Config
-    pvid: 70
+    comment: VTZS Server
+    pvid: 30
   - name: ether24
     comment: Trunk Native VLAN 10
     pvid: 10

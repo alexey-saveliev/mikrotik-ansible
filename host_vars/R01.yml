@@ -94,9 +94,43 @@ dhcp_server:
         - "10.90.0.65-10.90.127.255"
 
 bridge_port:
-  - name: ether12
+  - name: ether1
     comment: Management
     pvid: 10
+  - name: ether2
+    comment: Management
+    pvid: 10
+  - name: ether3
+    comment: Management
+    pvid: 10
+  - name: ether4
+    comment: Management
+    pvid: 10
+  - name: ether5
+    comment: Management
+    pvid: 10
+  - name: ether6
+    comment: Management
+    pvid: 10
+  - name: ether7
+    comment: Management
+    pvid: 10
+  - name: ether8
+    comment: Management
+    pvid: 10
+  - name: ether9
+    comment: Management
+    pvid: 10
+  - name: ether10
+    comment: Management
+    pvid: 10
+  - name: ether11
+    comment: Monitoring Server
+    pvid: 10
+  - name: ether12
+    comment: U6M23
+    pvid: 10
+    tagged: [11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus3
     comment: Trunk port
     pvid: 10
