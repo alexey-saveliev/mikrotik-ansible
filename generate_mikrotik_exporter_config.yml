@@ -1,0 +1,57 @@
+---
+- name: Generate mikrotik-exporter configuration
+  hosts: localhost
+  gather_facts: false
+  vars:
+    # Пароль для пользователя prometheus (можно изменить при необходимости)
+    prometheus_password: !vault |
+                          $ANSIBLE_VAULT;1.1;AES256
+                          61616431653639316463613533336234363262343239656665356235396634633364383264623664
+                          3865646165343634303763636562373038666636366534660a623265393438616163643361303638
+                          38616536643263306532343766636633346264363930343863373939336566663965653333313061
+                          3061326439343530620a303135616331616265383265643138613039383963393231616361623062
+                          3937
+    
+    # Настройки функций mikrotik-exporter
+    exporter_features:
+      bgp: false
+      conntrack: true
+      dhcp: true
+      dhcpv6: false
+      firmware: true
+      health: true
+      routes: true
+      poe: false
+      pools: true
+      optics: true
+
+  tasks:
+    - name: Load inventory data
+      include_vars:
+        file: hosts
+        name: inventory_data
+
+    - name: Generate mikrotik-exporter configuration file
+      copy:
+        content: |
+          devices:
+          {% for host, host_data in inventory_data['switches-ros7']['hosts'].items() %}
+            - name: {{ host }}
+              address: {{ host_data.address }}
+              user: prometheus
+              password: {{ prometheus_password }}
+          {% endfor %}
+
+          features:
+            bgp: {{ exporter_features.bgp | lower }}
+            conntrack: {{ exporter_features.conntrack | lower }}
+            dhcp: {{ exporter_features.dhcp | lower }}
+            dhcpv6: {{ exporter_features.dhcpv6 | lower }}
+            firmware: {{ exporter_features.firmware | lower }}
+            health: {{ exporter_features.health | lower }}
+            routes: {{ exporter_features.routes | lower }}
+            poe: {{ exporter_features.poe | lower }}
+            pools: {{ exporter_features.pools | lower }}
+            optics: {{ exporter_features.optics | lower }}
+        dest: mikrotik-exporter.yml
+      delegate_to: localhost
