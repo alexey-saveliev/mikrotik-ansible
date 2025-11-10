@@ -159,6 +159,8 @@
             address: 10.10.0.14
           - name: USWEGA02
             address: 10.10.0.15
+          - name: monitor
+            address: 10.10.0.10
           
       tags: dns
 
