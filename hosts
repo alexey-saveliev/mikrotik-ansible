@@ -34,6 +34,8 @@ switches-ros7:
       address: 10.10.0.71
     USWG7B:
       address: 10.10.0.72
+    USWGBKZ01:
+      address: 10.10.0.37
     USWGBKZ:
       address: 10.10.0.39
     USWE31:

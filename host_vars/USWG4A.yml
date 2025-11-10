@@ -26,11 +26,12 @@ bridge_port:
     comment: Default Config
     pvid: 70
   - name: ether9
-    comment: Switch at Cloud Stand
-    pvid: 70
-  - name: ether10
     comment: Default Config
     pvid: 70
+  - name: ether10
+    comment: 4.A.2.2.13.19
+    pvid: 40
+    tagged: [10,20,30,50,60,70,80,90]
   - name: ether11
     comment: Default Config
     pvid: 70

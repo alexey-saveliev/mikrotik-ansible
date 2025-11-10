@@ -27,7 +27,7 @@ bridge_vlan:
   - vlanid: 30
     comment: VTZS
   - vlanid: 40
-    comment: ORG
+    comment: PRESS
   - vlanid: 50
     comment: TECH
   - vlanid: 60

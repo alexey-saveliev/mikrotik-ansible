@@ -1,5 +1,5 @@
 ---
-# USWGBKZ specific settings
+# USWGBKZ01 specific settings
 bridge_port:
   - name: ether1
     comment: Default Config
@@ -26,7 +26,7 @@ bridge_port:
     comment: Default Config
     pvid: 50
   - name: ether9
-    comment: Switch at Cloud Stand
+    comment: Default Config
     pvid: 50
   - name: ether10
     comment: Default Config
@@ -39,48 +39,20 @@ bridge_port:
     pvid: 50
   - name: ether13
     comment: Default Config
-    pvid: 50
-  - name: ether14
-    comment: Default Config
-    pvid: 50
-  - name: ether15
-    comment: Default Config
-    pvid: 50
-  - name: ether16
-    comment: Default Config
-    pvid: 50
-  - name: ether17
-    comment: Default Config
-    pvid: 50
-  - name: ether18
-    comment: Default Config
-    pvid: 50
-  - name: ether19
-    comment: Default Config
-    pvid: 50
-  - name: ether20
-    comment: Default Config
-    pvid: 50
-  - name: ether21
-    comment: Unifi U6M25
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
-  - name: ether22
-    comment: Default Config
-    pvid: 50
-  - name: ether23
-    comment: Unifi U6M27
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
-  - name: ether24
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
     tagged: [10,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus2
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus3
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus4
     comment: Trunk port
     pvid: 10
     tagged: [10,20,30,40,50,60,70,80,90]
