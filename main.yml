@@ -161,6 +161,8 @@
             address: 10.10.0.15
           - name: monitor
             address: 10.10.0.10
+          - name: tv.finevid.link
+            address: 10.10.0.55
           
       tags: dns
 
