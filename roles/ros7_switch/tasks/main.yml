@@ -45,7 +45,8 @@
   community.routeros.api_find_and_modify:
     hostname: "{{ address }}"
     password: "{{ ros_api_password }}"
-    username: "{{ ros_api_user }}"    
+    username: "{{ ros_api_user }}"
+    ignore_dynamic: true
     path: interface bridge vlan
     find: >-
       {{
@@ -198,7 +199,8 @@
   community.routeros.api_find_and_modify:
     hostname: "{{ address }}"
     password: "{{ ros_api_password }}"
-    username: "{{ ros_api_user }}"    
+    username: "{{ ros_api_user }}"
+    ignore_dynamic: true
     path: interface bridge vlan
     find: >-
       {{
