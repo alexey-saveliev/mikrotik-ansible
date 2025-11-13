@@ -2,16 +2,16 @@
 # USWG5A specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
+    comment: 5A.2.1.8.14-r.5.42
     pvid: 70
   - name: ether2
-    comment: Default Config
+    comment: 5A.2.1.8.15-r.5.42
     pvid: 70
   - name: ether3
-    comment: Default Config
+    comment: 5A.2.1.6.7-r.5.36
     pvid: 70
   - name: ether4
-    comment: Default Config
+    comment: 5A.2.1.6.8-r.5.36
     pvid: 70
   - name: ether5
     comment: Default Config

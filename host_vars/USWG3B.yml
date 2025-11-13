@@ -2,35 +2,38 @@
 # USWG3B specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 70
+    comment: 3.B.3.4.5-r.3.18-VTZS
+    pvid: 30
   - name: ether2
-    comment: Default Config
-    pvid: 70
+    comment: 3.B.3.4.7-r.3.18-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
   - name: ether3
-    comment: Default Config
-    pvid: 70
+    comment: 3.B.3.3.19-r.3.19-VTZS
+    pvid: 30
   - name: ether4
-    comment: Default Config
-    pvid: 70
+    comment: 3.B.3.3.20-r.3.19-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
   - name: ether5
-    comment: Default Config
-    pvid: 70
+    comment: 3.B.2.1.23-r.3.20-VTZS
+    pvid: 30
   - name: ether6
-    comment: Default Config
+    comment: 3.B.2.1.24-r.3.20-Unifi
     pvid: 70
   - name: ether7
-    comment: Default Config
-    pvid: 70
+    comment: 3.B.3.11.17-SKUD 3-rd floor stairs
+    pvid: 20
   - name: ether8
-    comment: Default Config
+    comment: 3.B.3.9.18-SberDevices
     pvid: 70
   - name: ether9
-    comment: Switch at Cloud Stand
-    pvid: 70
+    comment: 3.B.2.1.15-r.3.11-VTZS
+    pvid: 30
   - name: ether10
-    comment: Default Config
-    pvid: 70
+    comment: 3.B.2.1.16-r.3.11-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
   - name: ether11
     comment: Default Config
     pvid: 70

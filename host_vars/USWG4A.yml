@@ -2,31 +2,31 @@
 # USWG4A specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
+    comment: 4A.2.8.12 r.4.14
     pvid: 70
   - name: ether2
-    comment: Default Config
+    comment: 4A.2.8.11 r.4.14
     pvid: 70
   - name: ether3
-    comment: Default Config
+    comment: 4A.2.7.7 Lounge
     pvid: 70
   - name: ether4
-    comment: Default Config
+    comment: 4A.2.12.20 Lounge
     pvid: 70
   - name: ether5
-    comment: Default Config
+    comment: 4A.2.5.19 Lounge
     pvid: 70
   - name: ether6
-    comment: Default Config
+    comment: 4A.2.5.21 Lounge
     pvid: 70
   - name: ether7
-    comment: Default Config
+    comment: 4A.2.7.1 Lounge
     pvid: 70
   - name: ether8
-    comment: Default Config
+    comment: 4A.2.5.17 r.4.08
     pvid: 70
   - name: ether9
-    comment: Default Config
+    comment: 4A.2.5.18 r.4.08
     pvid: 70
   - name: ether10
     comment: 4.A.2.2.13.19
