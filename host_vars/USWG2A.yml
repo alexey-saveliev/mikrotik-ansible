@@ -9,7 +9,7 @@ bridge_port:
     pvid: 10
     tagged: [11,20,30,40,50,60,70,80,90]
   - name: ether3
-    comment: 2.A.2.5.3-r.2.15
+    comment: 2.A.2.5.5-r.2.15-VTZS
     pvid: 30
   - name: ether4
     comment: 2.A.2.5.17-r.2.19-Unifi
@@ -67,8 +67,9 @@ bridge_port:
     comment: ZDZ Pult
     pvid: 10
   - name: ether21
-    comment: Default Config
-    pvid: 70
+    comment: 2.A.2.5.6-r.2.15-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
   - name: ether22
     comment: Default Config
     pvid: 70

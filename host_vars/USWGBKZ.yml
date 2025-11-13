@@ -56,11 +56,11 @@ bridge_port:
     comment: Default Config
     pvid: 50
   - name: ether19
-    comment: Default Config
-    pvid: 50
+    comment: SAV02
+    pvid: 10
   - name: ether20
-    comment: Default Config
-    pvid: 50
+    comment: SAV01
+    pvid: 10
   - name: ether21
     comment: Unifi U6M25
     pvid: 10

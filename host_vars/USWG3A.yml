@@ -2,35 +2,38 @@
 # USWG3A specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 70
+    comment: 3.A.2.10.7-EvelHall3-SKUD
+    pvid: 20
   - name: ether2
-    comment: Default Config
-    pvid: 70
+    comment: 3.A.2.11.16-r.3.43
+    pvid: 40
   - name: ether3
-    comment: Default Config
-    pvid: 70
+    comment: 3.A.2.11.23-r.3.43
+    pvid: 40
   - name: ether4
-    comment: Default Config
-    pvid: 70
+    comment: 3.A.2.11.24-r.3.43
+    pvid: 40
   - name: ether5
-    comment: Default Config
-    pvid: 70
+    comment: 3.A.2.7.10-r.3.40-VTZS
+    pvid: 20
   - name: ether6
-    comment: Default Config
-    pvid: 70
+    comment: 3.A.2.7.11-r.3.40-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
   - name: ether7
-    comment: Default Config
-    pvid: 70
+    comment: 3.A.2.6.23-r.3.38-VTZS
+    pvid: 20
   - name: ether8
-    comment: Default Config
-    pvid: 70
+    comment: 3.A.2.6.24-r.3.38-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
   - name: ether9
-    comment: Switch at Cloud Stand
-    pvid: 70
+    comment: 3.A.2.6.9-r.3.37-VTZS
+    pvid: 20
   - name: ether10
-    comment: Default Config
-    pvid: 70
+    comment: 3.A.2.6.10-r.3.37-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
   - name: ether11
     comment: Default Config
     pvid: 70
@@ -69,7 +72,7 @@ bridge_port:
     pvid: 70
   - name: ether23
     comment: VTZS Server
-    pvid: 30
+    pvid: 10
   - name: ether24
     comment: Trunk Native VLAN 10
     pvid: 10
