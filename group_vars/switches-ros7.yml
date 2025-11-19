@@ -35,6 +35,8 @@ bridge_vlan:
   - vlanid: 70
     comment: EXPO
   - vlanid: 80
-    comment: RESERV80
+    comment: SDZ
   - vlanid: 90
     comment: RESERV90
+  - vlanid: 100
+    comment: ZDZ PTZ 

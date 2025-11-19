@@ -20,14 +20,15 @@ bridge_port:
     comment: Default Config
     pvid: 70
   - name: ether7
-    comment: Default Config
-    pvid: 70
+    comment: 3.1.1.22.1-USWEGA02#23
+    pvid: 10
+    tagged: [11,20,30,40,50,60,70,80,90,100]
   - name: ether8
     comment: Default Config
     pvid: 70
   - name: ether9
-    comment: Switch at Cloud Stand
-    pvid: 70
+    comment: 03.1.1.15.14-Stab RPG
+    pvid: 10
   - name: ether10
     comment: Default Config
     pvid: 70
@@ -73,12 +74,12 @@ bridge_port:
   - name: ether24
     comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]

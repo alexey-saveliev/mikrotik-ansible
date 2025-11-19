@@ -2,10 +2,10 @@
 
 switches-ros7:
   hosts:
-    R01:
-      address: 10.10.0.2
-    R02:
-      address: 10.10.0.3
+    # R01:
+    #   address: 10.10.0.2
+    # R02:
+    #   address: 10.10.0.3
     SWG01: # Storm
       address: 10.10.0.4
     SWG02: # Storm

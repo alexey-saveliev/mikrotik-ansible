@@ -2,38 +2,43 @@
 # USWG7B specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 70
+    comment: 7B.3.1.7.4-r.7.17-VTZS
+    pvid: 30
   - name: ether2
-    comment: Default Config
-    pvid: 70
+    comment: 7B.3.1.7.5-r.7.17-VTZS
+    pvid: 30
   - name: ether3
-    comment: Default Config
-    pvid: 70
+    comment: 7B.3.1.7.6-r.7.17-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether4
-    comment: Default Config
-    pvid: 70
+    comment: 7B.2.1.13.18-r.7.16
+    pvid: 30
   - name: ether5
-    comment: Default Config
-    pvid: 70
+    comment: 7B.3.1.13.20-r.7.16
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether6
-    comment: Default Config
-    pvid: 70
+    comment: 7B.3.1.6.20-r.7.18-VTZS
+    pvid: 30
   - name: ether7
-    comment: Default Config
-    pvid: 70
+    comment: 7B.3.1.1.18-r.7.18-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether8
-    comment: Default Config
-    pvid: 70
+    comment: 7B.3.1.4.13-r.7.22-VTZS
+    pvid: 30
   - name: ether9
-    comment: Switch at Cloud Stand
-    pvid: 70
+    comment: 7B.3.1.4.14-r.7.22-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether10
-    comment: Default Config
-    pvid: 70
+    comment: 7B.3.1.11.10-r.7.10-VTZS
+    pvid: 30
   - name: ether11
-    comment: Default Config
-    pvid: 70
+    comment: 7B.3.1.11.16-r.7.10-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether12
     comment: Default Config
     pvid: 70
@@ -73,12 +78,12 @@ bridge_port:
   - name: ether24
     comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]

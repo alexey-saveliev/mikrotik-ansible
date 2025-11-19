@@ -5,8 +5,9 @@ bridge_port:
     comment: Default Config
     pvid: 70
   - name: ether2
-    comment: Default Config
-    pvid: 70
+    comment: 1.1.1.2-GA-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether3
     comment: Default Config
     pvid: 70
@@ -26,7 +27,7 @@ bridge_port:
     comment: Default Config
     pvid: 70
   - name: ether9
-    comment: Switch at Cloud Stand
+    comment: efault Config
     pvid: 70
   - name: ether10
     comment: Default Config
@@ -73,12 +74,12 @@ bridge_port:
   - name: ether24
     comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]

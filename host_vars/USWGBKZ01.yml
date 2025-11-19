@@ -2,26 +2,26 @@
 # USWGBKZ01 specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 50
+    comment: R1.1.02.04-SKUD Stage
+    pvid: 20
   - name: ether2
-    comment: Default Config
-    pvid: 50
+    comment: R1.1.02.05-SKUD Stage
+    pvid: 20
   - name: ether3
-    comment: Default Config
-    pvid: 50
+    comment: R1.1.02.14-SKUD Stage
+    pvid: 20
   - name: ether4
-    comment: Default Config
-    pvid: 50
+    comment: R1.1.02.15-SKUD Stage
+    pvid: 20
   - name: ether5
-    comment: Default Config
-    pvid: 50
+    comment: BKZ-SKUD05 PULT
+    pvid: 20
   - name: ether6
-    comment: Default Config
-    pvid: 50
+    comment: SKUD06 Office
+    pvid: 20
   - name: ether7
-    comment: Default Config
-    pvid: 50
+    comment: RZL Backup
+    pvid: 11
   - name: ether8
     comment: Default Config
     pvid: 50
@@ -43,16 +43,16 @@ bridge_port:
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus3
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus4
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]

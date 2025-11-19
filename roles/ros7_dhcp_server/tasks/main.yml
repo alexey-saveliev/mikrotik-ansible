@@ -32,9 +32,9 @@
     path: "ip dhcp-server"
   register: dhcp_servers_list
 
-- name: Print dhcp_servers_list
-  ansible.builtin.debug:
-    var: dhcp_servers_list
+# - name: Print dhcp_servers_list
+#   ansible.builtin.debug:
+#     var: dhcp_servers_list
 
 - name: Modify DHCP server
   community.routeros.api_find_and_modify:

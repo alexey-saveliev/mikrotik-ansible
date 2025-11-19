@@ -11,29 +11,30 @@ bridge_port:
     comment: 3.A.2.11.23-r.3.43
     pvid: 40
   - name: ether4
-    comment: 3.A.2.11.24-r.3.43
-    pvid: 40
+    comment: 3.A.2.11.17-r.3.43-Unifi
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether5
     comment: 3.A.2.7.10-r.3.40-VTZS
     pvid: 30
   - name: ether6
     comment: 3.A.2.7.11-r.3.40-Unifi
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether7
     comment: 3.A.2.6.23-r.3.38-VTZS
     pvid: 30
   - name: ether8
     comment: 3.A.2.6.24-r.3.38-Unifi
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether9
     comment: 3.A.2.6.9-r.3.37-VTZS
     pvid: 30
   - name: ether10
     comment: 3.A.2.6.10-r.3.37-Unifi
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether11
     comment: Default Config
     pvid: 70
@@ -76,12 +77,12 @@ bridge_port:
   - name: ether24
     comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]

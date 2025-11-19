@@ -7,14 +7,14 @@ bridge_port:
   - name: ether2
     comment: 5B.2.1.2.5-r.5.10-Unifi
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether3
     comment: 5B.2.1.1.10-r.5.15-VTZS
     pvid: 30
   - name: ether4
     comment: 5B.2.1.5.16-r.5.15-Unifi
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether5
     comment: Default Config
     pvid: 70
@@ -27,13 +27,13 @@ bridge_port:
   - name: ether8
     comment: 5B.3.1.7.11-r.5.18-Unifi
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether9
     comment: Switch at Cloud Stand
     pvid: 70
   - name: ether10
-    comment: Default Config
-    pvid: 70
+    comment: 5.31-VTZS
+    pvid: 30
   - name: ether11
     comment: Default Config
     pvid: 70
@@ -76,12 +76,12 @@ bridge_port:
   - name: ether24
     comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
