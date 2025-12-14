@@ -2,90 +2,106 @@
 # USWG2A specific settings
 bridge_port:
   - name: ether1
-    comment: 2.A.2.6.2-r.2.20-VTZS
-    pvid: 30
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether2
-    comment: 2.A.2.6.3-r.2.20-Unifi U6M26
+    comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [11,20,30,40,50,60,70,80,90,100]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether3
-    comment: 2.A.2.5.5-r.2.15-VTZS
-    pvid: 30
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether4
-    comment: 2.A.2.5.17-r.2.19-Unifi U6M24
+    comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [11,20,30,40,50,60,70,80,90,100]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether5
-    comment: 2.A.2.4.23-r.2.14-VTZS
-    pvid: 30
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether6
-    comment: 2.A.2.4.24-r.2.14-Unifi U6M22
+    comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [11,20,30,40,50,60,70,80,90,100]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether7
-    comment: 2.A.2.4.13-r.2.12-VTZS
-    pvid: 30
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether8
-    comment: 2.A.2.4.14-r.2.12-Unifi U6M12
+    comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [11,20,30,40,50,60,70,80,90,100]
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether9
-    comment: 2.A.2.2.13-ZDZ Medicine
-    pvid: 70
-  - name: ether10
-    comment: 2.A.2.2.15-ZDZ Bankomat
-    pvid: 70
-  - name: ether11
-    comment: 2.A.2.9.9-Catering 2.16
-    pvid: 70
-  - name: ether12
-    comment: 2.A.2.6.17-2.06-Unifi
+    comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [11,20,30,40,50,60,70,80,90,100]
+    tagged: [20,30,40,50,60,70,80,90,100]
+  - name: ether10
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
+  - name: ether11
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
+  - name: ether12
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether13
-    comment: 2.A.2.9.11-Main Stage Link
-    pvid: 50
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether14
-    comment: 2.A.2.4.3-2.07
-    pvid: 60
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether15
-    comment: 2.A.2.6.18-2.06
-    pvid: 60
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether16
-    comment: 2.A.2.5.19-r.2.19-VTZS
-    pvid: 30
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether17
-    comment: 2.A.2.3.24-MKZ-Unifi U6M10
+    comment: Trunk Native VLAN 10
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether18
-    comment: 2.A.2.3.22-MKZ
-    pvid: 70
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether19
-    comment: 2.A.2.3.23-MKZ
-    pvid: 70
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether20
-    comment: ZDZ Pult
-    pvid: 100
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether21
-    comment: 2.A.2.5.6-r.2.15-Unifi
+    comment: Trunk Native VLAN 10
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether22
-    comment: SDZ - Unifi U6M19
+    comment: Trunk Native VLAN 10
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether23
-    comment: SDZ
-    pvid: 80
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether24
-    comment: SDZ
-    pvid: 80
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus1
-    comment: Trunk port
+    comment: Uplink
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus2
-    comment: Trunk port
+    comment: Uplink
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
