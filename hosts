@@ -6,51 +6,56 @@ switches-ros7:
     #   address: 10.10.0.2
     # R02:
     #   address: 10.10.0.3
-    SWG01: # Storm
+    SW01: # Storm
       address: 10.10.0.4
-    SWG02: # Storm
+    SW02: # Storm
       address: 10.10.0.5
-    SWE01: # Storm
+    SW1DC01: # Storm
       address: 10.10.0.6
-    SWE02: # Storm
+    SW1DC02: # Storm
       address: 10.10.0.7
-    USWG1B:
+    USW1A:
       address: 10.10.0.12
-    USWG2A:
-      address: 10.10.0.21
-    USWG3A:
-      address: 10.10.0.38
-    USWG3B:
-      address: 10.10.0.32
-    USWG4A:
-      address: 10.10.0.41
-    USWG4B:
-      address: 10.10.0.42
-    USWG5A:
-      address: 10.10.0.51
-    USWG5B:
-      address: 10.10.0.52
-    USWG7A:
-      address: 10.10.0.71
-    USWG7B:
-      address: 10.10.0.72
-    USWGBKZ01:
-      address: 10.10.0.37
-    USWGBKZ:
-      address: 10.10.0.39
-    USWE31:
-      address: 10.10.0.31
-    USWE-1:
+    USW1C:
       address: 10.10.0.11
-    USWE33:
-      address: 10.10.0.33
-    USWE34:
-      address: 10.10.0.34
-    USWEGA01:
+    USW1D:
+      address: 10.10.0.13
+    USW1F:
       address: 10.10.0.14
-    USWEGA02:
+    USW1E:
       address: 10.10.0.15
-    
+    USW2A:
+      address: 10.10.0.21
+    USW2C:
+      address: 10.10.0.27
+    USW2D:
+      address: 10.10.0.23
+    USW2H:
+      address: 10.10.0.22
+    USW2DEXPO:
+      address: 10.10.0.24
+    USW2CEXPO:
+      address: 10.10.0.25
+    USW2PBAR:
+      address: 10.10.0.26
+    USW2CAFE:
+      address: 10.10.0.29
+    USW3E:
+      address: 10.10.0.31
+    USW3F:
+      address: 10.10.0.32
+    USW3M:
+      address: 10.10.0.33
+    USW3K:
+      address: 10.10.0.36
+    USW3P:
+      address: 10.10.0.38
+    USW4C:
+      address: 10.10.0.41
+    USW4D:
+      address: 10.10.0.42
+    USW4E:
+      address: 10.10.0.43
 
 dhcp-servers:
   hosts:
