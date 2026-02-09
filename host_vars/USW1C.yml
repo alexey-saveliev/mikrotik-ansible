@@ -2,23 +2,23 @@
 # CRS326-24G-2S+ USW1C specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 50
+    comment: 1C-C-19 STOLB A5000
+    pvid: 20
   - name: ether2
-    comment: Default Config
-    pvid: 50
+    comment: 1C-C-14 STOLB A5000
+    pvid: 20
   - name: ether3
-    comment: Default Config
-    pvid: 50
+    comment: 1C-C-17 A5000 LUYK
+    pvid: 20
   - name: ether4
-    comment: Default Config
-    pvid: 50
+    comment: 1C-C-20 STOLB A5000
+    pvid: 20
   - name: ether5
     comment: Default Config
     pvid: 50
   - name: ether6
-    comment: Default Config
-    pvid: 50
+    comment: 1C-C-18 A5000 LUYK
+    pvid: 20
   - name: ether7
     comment: Default Config
     pvid: 50

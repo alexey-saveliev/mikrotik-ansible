@@ -5,8 +5,8 @@ bridge_port:
     comment: Default Config
     pvid: 50
   - name: ether2
-    comment: Default Config
-    pvid: 50
+    comment: 1D-C-07 STOLB VIP SKUD
+    pvid: 20
   - name: ether3
     comment: Default Config
     pvid: 50
