@@ -117,52 +117,54 @@
             address: 10.10.0.2
           - name: R02
             address: 10.10.0.3
-          - name: SWG01
+          - name: SW01
             address: 10.10.0.4
-          - name: SWG02
+          - name: SW02
             address: 10.10.0.5
-          - name: SWE01
+          - name: SW1DC01
             address: 10.10.0.6
-          - name: SWE02
+          - name: SW1DC02
             address: 10.10.0.7
-          - name: USWG3A
-            address: 10.10.0.38
-          - name: USWG1B
-            address: 10.10.0.12          
-          - name: USWG2A
-            address: 10.10.0.21
-          - name: USWG3B
-            address: 10.10.0.32
-          - name: USWG4A
-            address: 10.10.0.41
-          - name: USWG4B
-            address: 10.10.0.42
-          - name: USWG5A
-            address: 10.10.0.51
-          - name: USWG5B
-            address: 10.10.0.52
-          - name: USWG7A
-            address: 10.10.0.71
-          - name: USWG7B
-            address: 10.10.0.72
-          - name: USWGBKZ
-            address: 10.10.0.39
-          - name: USWE31
-            address: 10.10.0.31
-          - name: USWE-1
+          - name: USW1C
             address: 10.10.0.11
-          - name: USWE33
-            address: 10.10.0.33
-          - name: USWE34
-            address: 10.10.0.34
-          - name: USWEGA01
+          - name: USW1A
+            address: 10.10.0.12
+          - name: USW1D
+            address: 10.10.0.13
+          - name: USW1F
             address: 10.10.0.14
-          - name: USWEGA02
+          - name: USW1E
             address: 10.10.0.15
-          - name: monitor
-            address: 10.10.0.10
-          - name: tv.finevid.link
-            address: 10.10.0.55
+          - name: USW2A
+            address: 10.10.0.21
+          - name: USW2H
+            address: 10.10.0.22
+          - name: USW2D
+            address: 10.10.0.23
+          - name: USW2C
+            address: 10.10.0.27
+          - name: USW2F
+            address: 10.10.0.28
+          - name: USW3E
+            address: 10.10.0.31
+          - name: USW3F
+            address: 10.10.0.32
+          - name: USW3M
+            address: 10.10.0.33
+          - name: USW3K
+            address: 10.10.0.36
+          - name: USW3R
+            address: 10.10.0.37
+          - name: USW3P
+            address: 10.10.0.38
+          - name: USW4C
+            address: 10.10.0.41
+          - name: USW4D
+            address: 10.10.0.42
+          - name: USW4E
+            address: 10.10.0.43
+          
+          
           
       tags: dns
 

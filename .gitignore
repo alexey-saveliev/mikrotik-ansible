@@ -1,4 +1,8 @@
 .DS_Store
 docs/OLD
 mikrotik-exporter.yml
+bin/
+tmp/
+lib/
+pyvenv.cfg
 .GScredentials.json
