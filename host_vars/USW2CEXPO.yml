@@ -4,15 +4,23 @@ bridge_port:
   - name: ether1
     comment: 11. Security Code 
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether2
     comment: 12. F6
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether3
     comment: 13. Indeed
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether4
     comment: 14. GK SPB
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether5
     comment: U7PM58
     pvid: 10
@@ -20,12 +28,18 @@ bridge_port:
   - name: ether6
     comment: Stage
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether7
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether8
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether9
     comment: U7PM57
     pvid: 10
@@ -33,6 +47,8 @@ bridge_port:
   - name: ether10
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether11
     comment: U7PM55
     pvid: 10
@@ -40,18 +56,28 @@ bridge_port:
   - name: ether12
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether13
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether14
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether15
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether16
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether17
     comment: U7PM59
     pvid: 10
@@ -59,90 +85,148 @@ bridge_port:
   - name: ether18
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether19
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether20
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether21
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether22
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether23
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether24
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether25
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether26
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether27
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether28
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether29
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether30
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether31
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether32
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether33
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether34
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether35
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether36
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether37
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether38
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether39
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether40
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether41
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether42
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether43
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether44
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether45
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether46
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether47
     comment: 1C-E-04 - USW1C Port 24 
     pvid: 10

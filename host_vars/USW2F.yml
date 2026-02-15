@@ -19,6 +19,8 @@ bridge_port:
   - name: ether3
     comment: 2F.1-B-13 - Hall 1. Pult common
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: ether4
     comment: Hall 1. Unifi U7PM44
     pvid: 10
@@ -26,24 +28,38 @@ bridge_port:
   - name: ether5
     comment: Default Config
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: ether6
     comment: Default Config
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: ether7
     comment: Default Config
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: ether8
     comment: Default Config
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: ether9
     comment: Default Config
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: ether10
     comment: Default Config
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: ether11
     comment: Default Config
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: ether12
     comment: Default Config
     comment: Trunk port Native VLAN 10

@@ -31,6 +31,8 @@ bridge_port:
   - name: sfp-sfpplus6
     comment: Molodezhka Pult
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: sfp-sfpplus7
     comment: Trunk port
     pvid: 10

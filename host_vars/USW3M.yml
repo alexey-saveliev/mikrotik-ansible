@@ -19,6 +19,8 @@ bridge_port:
   - name: ether3
     comment: Hall 2. Pult
     pvid: 50
+    edge: yes
+    loop-protect: on
   - name: ether4
     comment: 3M.1-B-08 Unifi U7PM33
     pvid: 10
@@ -26,57 +28,93 @@ bridge_port:
   - name: ether5
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether6
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether7
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether8
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether9
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether10
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether11
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether12
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether13
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether14
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether15
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether16
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether17
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether18
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether19
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether20
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether21
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether22
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether23
     comment: Management
     pvid: 10
