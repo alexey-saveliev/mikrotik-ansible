@@ -135,15 +135,23 @@
             address: 10.10.0.14
           - name: USW1E
             address: 10.10.0.15
+          - name: USW2F
+            address: 10.10.0.20
           - name: USW2A
             address: 10.10.0.21
           - name: USW2H
             address: 10.10.0.22
           - name: USW2D
             address: 10.10.0.23
+          - name: USW2DEXPO
+            address: 10.10.0.24
+          - name: USW2CEXPO
+            address: 10.10.0.25
+          - name: USW2PBAR
+            address: 10.10.0.26
           - name: USW2C
             address: 10.10.0.27
-          - name: USW2F
+          - name: USW2B
             address: 10.10.0.28
           - name: USW3E
             address: 10.10.0.31
@@ -163,6 +171,12 @@
             address: 10.10.0.42
           - name: USW4E
             address: 10.10.0.43
+          - name: USW4G
+            address: 10.10.0.47
+          - name: tv.finevid.link
+            address: 10.10.0.55
+          - name: vtzs.finevid.link
+            address: 10.10.0.55
           
           
           
