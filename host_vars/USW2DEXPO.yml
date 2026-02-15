@@ -1,63 +1,63 @@
 ---
 # CRS354-48P-4S+2Q+ USW2DEXPO specific settings
+
 bridge_port:
   - name: ether1
-    comment: Default Config
+    comment: Stand 07. Gazprombank
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether2
-    comment: Default Config
+    comment: Stand 08. T-Bank
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether3
-    comment: Default Config
-    pvid: 70
-    edge: yes
-    loop-protect: on
+    comment: Stand 07. Gazinformservice Unifi U7PM41
+    pvid: 10
+    tagged: [11,20,30,40,50,60,70,80,90,100]    
   - name: ether4
-    comment: Default Config
+    comment: Stand 07. Gazinformservice
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether5
-    comment: Default Config
+    comment: Stand 02. Sber
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether6
-    comment: Default Config
+    comment: Stand 03. Positive Technologies 
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether7
-    comment: Default Config
+    comment: Stand 02. Sber
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether8
-    comment: Default Config
+    comment: Stand 00. Bank PSB
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether9
-    comment: Default Config
+    comment: Stand 09. Garda
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether10
-    comment: Default Config
+    comment: Stand 07. Gazinformservice
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether11
-    comment: Default Config
+    comment: Stand 01. ScalaR
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether12
-    comment: Default Config
+    comment: Stand 02. Sber
     pvid: 70
     edge: yes
     loop-protect: on
@@ -72,22 +72,22 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether15
-    comment: Default Config
+    comment: Stand 15. Flant
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether16
-    comment: Default Config
+    comment: Stand 16. Axiom
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether17
-    comment: Default Config
+    comment: Stand 17. Dialog Nauka
     pvid: 70
     edge: yes
     loop-protect: on
   - name: ether18
-    comment: Default Config
+    comment: STAND 18. ITD Group 
     pvid: 70
     edge: yes
     loop-protect: on

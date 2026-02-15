@@ -1,5 +1,6 @@
 ---
 # CRS354-48P-4S+2Q+ USW2CEXPO specific settings
+
 bridge_port:
   - name: ether1
     comment: 11. Security Code 
@@ -22,7 +23,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether5
-    comment: U7PM58
+    comment: Stand 11 Security Code Unifi U7PM58
     pvid: 10
     tagged: [11,20,30,40,50,60,70,80,90,100]
   - name: ether6
@@ -41,7 +42,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether9
-    comment: U7PM57
+    comment: Stand 22 UserGate Unifi U7PM57
     pvid: 10
     tagged: [11,20,30,40,50,60,70,80,90,100]
   - name: ether10
@@ -64,10 +65,9 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether14
-    comment: Default Config
-    pvid: 70
-    edge: yes
-    loop-protect: on
+    comment: Expo Stage
+    pvid: 10
+    tagged: [11,20,30,40,50,60,70,80,90,100]
   - name: ether15
     comment: Default Config
     pvid: 70
@@ -79,7 +79,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether17
-    comment: U7PM59
+    comment: Stand 19 InfoTeks Unifi U7PM59
     pvid: 10
     tagged: [11,20,30,40,50,60,70,80,90,100]
   - name: ether18

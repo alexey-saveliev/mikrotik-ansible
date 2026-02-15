@@ -110,7 +110,7 @@ bridge_port:
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether24
-    comment: Trunk Native VLAN 10
+    comment: 2-nd floor. Stand 29 Aladdin
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus1
