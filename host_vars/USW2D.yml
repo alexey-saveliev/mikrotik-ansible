@@ -2,10 +2,10 @@
 # CRS326-24G-2S+ USW2D specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 70
+    comment: 2D-B-1 - Main Hall
+    pvid: 50
   - name: ether2
-    comment: Default Config
+    comment: Vending Machine
     pvid: 70
   - name: ether3
     comment: Default Config

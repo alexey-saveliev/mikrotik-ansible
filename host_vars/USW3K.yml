@@ -1,15 +1,22 @@
 ---
 # CRS326-24G-2S+ USW3K specific settings
+
+
+# Порт1: кабель Т1 - трансляция
+# Порт2: кабель Т2 - трансляция        резерв.
+# Порт3: кабель Б - бытовая сеть
+# Порт24: кабель Точка 32 - точка U7PM32
+
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 70
+    comment: Hall 3 - Broadcast Backup
+    pvid: 11
   - name: ether2
-    comment: Default Config
-    pvid: 70
+    comment: Hall 3 - Broadcast Main
+    pvid: 10
   - name: ether3
-    comment: Default Config
-    pvid: 70
+    comment: Hall 3 - Tech network
+    pvid: 50
   - name: ether4
     comment: Default Config
     pvid: 70
@@ -71,8 +78,9 @@ bridge_port:
     comment: Management
     pvid: 10
   - name: ether24
-    comment: Management
+    comment: Hall 3 - Unifi U7PM32
     pvid: 10
+    tagged: [11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10

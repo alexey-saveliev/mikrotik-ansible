@@ -2,7 +2,7 @@
 # CRS326-24G-2S+ USW2C specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
+    comment: 2C-B-3 - Main Hall
     pvid: 50
   - name: ether2
     comment: Default Config

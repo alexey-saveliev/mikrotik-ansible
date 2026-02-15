@@ -7,15 +7,23 @@ bridge_port:
   - name: ether2
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether3
     comment: Default Config
     pvid: 70
+    edge: auto
+    loop-protect: off
   - name: ether4
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether5
     comment: Default Config
     pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether6
     comment: Default Config
     pvid: 70
@@ -28,12 +36,14 @@ bridge_port:
   - name: ether9
     comment: Default Config
     pvid: 70
+    loop-protect: default
   - name: ether10
     comment: Default Config
     pvid: 70
   - name: ether11
     comment: Default Config
     pvid: 70
+    loop-protect: on
   - name: ether12
     comment: Default Config
     pvid: 70

@@ -24,6 +24,8 @@ switches-ros7:
       address: 10.10.0.14
     USW1E:
       address: 10.10.0.15
+    USW2F:
+      address: 10.10.0.20
     USW2A:
       address: 10.10.0.21    
     USW2H:
@@ -37,9 +39,7 @@ switches-ros7:
     USW2PBAR:
       address: 10.10.0.26
     USW2C:
-      address: 10.10.0.27
-    USW2F:
-      address: 10.10.0.28
+      address: 10.10.0.27    
     USW2CAFE:
       address: 10.10.0.29
     USW3E:

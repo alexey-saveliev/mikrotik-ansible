@@ -1,18 +1,28 @@
 ---
 # CRS326-24G-2S+ USW3M specific settings
+
+# Чекалов Антон, [14.02.2026 13:55]
+# USW3M Port 1 -> трансляция осн III
+# USW3M Port 2 -> трансляция резерв II
+# USW3M Port 3 -> бытовая сеть I
+
+# Чекалов Антон, [14.02.2026 13:55]
+# USW3M Port 4 -> 3M.1-B-08 -> U7PM33
+
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 70
+    comment: Hall 2. Broadcast Main
+    pvid: 10
   - name: ether2
-    comment: Default Config
-    pvid: 70
+    comment: Hall 2. Broadcast Backup
+    pvid: 11
   - name: ether3
-    comment: Default Config
-    pvid: 70
+    comment: Hall 2. Pult
+    pvid: 50
   - name: ether4
-    comment: Default Config
-    pvid: 70
+    comment: 3M.1-B-08 Unifi U7PM33
+    pvid: 10
+    tagged: [11,20,30,40,50,60,70,80,90,100]
   - name: ether5
     comment: Default Config
     pvid: 70

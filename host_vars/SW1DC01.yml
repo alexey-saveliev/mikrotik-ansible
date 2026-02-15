@@ -22,9 +22,8 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp3
-    comment: Trunk port
+    comment: 2C-B-4 - Broadcast Main
     pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp4
     comment: Trunk port
     pvid: 10
