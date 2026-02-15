@@ -15,8 +15,8 @@ bridge_port:
     comment: 1D-C-18 SKUD Right
     pvid: 20
   - name: ether4
-    comment: Default Config
-    pvid: 20
+    comment: 1D-D-15 2-nd floor. Stand 10 Lekton
+    pvid: 70
   - name: ether5
     comment: 1D-G-09 A5000 Entrance
     pvid: 20
@@ -74,7 +74,7 @@ bridge_port:
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether22
-    comment: Trunk Native VLAN 10
+    comment: 2-nd floor. 1D-D-16 Stand 10 Lekton Unifi U7PM56
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether23
