@@ -42,13 +42,13 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether9
-    comment: Default Config
-    pvid: 50
+    comment: 2C-B-19 Expo under stair Broadcast Main
+    pvid: 10
     edge: yes
     loop-protect: on
   - name: ether10
-    comment: Default Config
-    pvid: 50
+    comment: 2C-B-20 Expo under stair Broadcast Backup
+    pvid: 11
     edge: yes
     loop-protect: on
   - name: ether11
@@ -90,13 +90,13 @@ bridge_port:
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90,100]
   - name: ether19
-    comment: Trunk Native VLAN 10
+    comment: 2C-B-03 USW2CAFE Port 23
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90,100]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: ether20
-    comment: Trunk Native VLAN 10
+    comment: 2C-B-04 USW2CAFE Port 24
     pvid: 10
-    tagged: [20,30,40,50,60,70,80,90,100]
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: ether21
     comment: Trunk Native VLAN 10
     pvid: 10

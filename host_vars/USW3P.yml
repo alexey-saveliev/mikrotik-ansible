@@ -107,10 +107,9 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether22
-    comment: Default Config
-    pvid: 70
-    edge: yes
-    loop-protect: on
+    comment: Unifi U6E02
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: ether23
     comment: Management
     pvid: 10
