@@ -19,7 +19,7 @@ bridge_port:
     pvid: 10
     tagged: [11, 20, 30, 40, 50, 60, 70, 80, 90, 100]
   - name: ether6
-    comment: 1C-E-6 - 4th floor - U6PM49
+    comment: 1C-E-6 - 4th floor - U7PM49
     pvid: 10
     tagged: [11, 20, 30, 40, 50, 60, 70, 80, 90, 100]
   - name: ether7
