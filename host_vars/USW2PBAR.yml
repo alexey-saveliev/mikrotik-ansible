@@ -6,11 +6,13 @@ bridge_port:
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether2
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether3
     comment: Default Config
     pvid: 70
@@ -23,6 +25,7 @@ bridge_port:
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether5
     comment: Default Config
     pvid: 70

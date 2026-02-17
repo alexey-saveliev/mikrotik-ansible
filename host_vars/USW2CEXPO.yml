@@ -7,21 +7,25 @@ bridge_port:
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether2
     comment: 12. F6
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether3
     comment: 13. Indeed
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether4
     comment: 14. GK SPB
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether5
     comment: Stand 11 Security Code Unifi U7PM58
     pvid: 10
@@ -31,16 +35,19 @@ bridge_port:
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether7
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether8
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether9
     comment: Stand 22 UserGate Unifi U7PM57
     pvid: 10
@@ -50,6 +57,7 @@ bridge_port:
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether11
     comment: U7PM55
     pvid: 10
@@ -59,11 +67,13 @@ bridge_port:
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether13
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether14
     comment: Expo Stage
     pvid: 10
@@ -73,11 +83,13 @@ bridge_port:
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether16
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether17
     comment: Stand 19 InfoTeks Unifi U7PM59
     pvid: 10
@@ -87,146 +99,175 @@ bridge_port:
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether19
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether20
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether21
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether22
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether23
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether24
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether25
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether26
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether27
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether28
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether29
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether30
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether31
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether32
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether33
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether34
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether35
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether36
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether37
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether38
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether39
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether40
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether41
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether42
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether43
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether44
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether45
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether46
     comment: Default Config
     pvid: 70
     edge: yes
     loop-protect: on
+    speed: 100
   - name: ether47
     comment: 1C-E-04 - USW1C Port 24 
     pvid: 10

@@ -42,11 +42,11 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus3
-    comment: Trunk port
+    comment: SW1DC01
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus4
-    comment: Trunk port
+    comment: SW1DC02
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus5
@@ -58,43 +58,43 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus7
-    comment: Trunk port
+    comment: USW1F
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus8
-    comment: Trunk port
+    comment: USW1E
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus9
-    comment: Trunk port
+    comment: USW3K
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus10
-    comment: Trunk port
+    comment: USW2F
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus11
-    comment: Trunk port
+    comment: USW4D
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus12
-    comment: Trunk port
+    comment: USW4E
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus13
-    comment: Trunk port
+    comment: USW2H
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus14
-    comment: Trunk port
+    comment: USW4C
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus15
-    comment: Trunk port
+    comment: USW3M
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus16
-    comment: Trunk port
+    comment: USW3E
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus17
@@ -102,11 +102,11 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus18
-    comment: Trunk port
+    comment: USW3F
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus19
-    comment: Trunk port
+    comment: USW3P
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90,100]
   - name: sfp-sfpplus20

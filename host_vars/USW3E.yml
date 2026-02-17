@@ -6,8 +6,8 @@ bridge_port:
     pvid: 10
     tagged: [11,20,30,40,50,60,70,80,90,100]
   - name: ether2
-    comment: Default Config
-    pvid: 70
+    comment: 3E-D-14 Press Hall Printer
+    pvid: 40
     edge: yes
     loop-protect: on
   - name: ether3

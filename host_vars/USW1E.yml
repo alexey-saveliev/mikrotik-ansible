@@ -2,7 +2,7 @@
 # CRS326-24G-2S+ USW1E specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
+    comment: 1-st floor. Nabiullina TV VTZS
     pvid: 50
     edge: yes
     loop-protect: on

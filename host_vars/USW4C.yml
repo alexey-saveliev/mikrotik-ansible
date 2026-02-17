@@ -21,7 +21,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether5
-    comment: Default Config
+    comment: 4.2 Stab BoR TV VTZS
     pvid: 60
     edge: yes
     loop-protect: on  

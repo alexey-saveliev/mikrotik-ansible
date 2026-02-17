@@ -26,8 +26,8 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether6
-    comment: Default Config
-    pvid: 70
+    comment: Videoserver at cafe
+    pvid: 60
     edge: yes
     loop-protect: on
   - name: ether7
