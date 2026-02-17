@@ -318,3 +318,20 @@
       values:
         edge: 'auto'
     loop: "{{ hostvars[inventory_hostname]['bridge_port'] | rejectattr('edge', 'defined') | list }}"
+
+- name: Set speed on interfaces
+  block:
+    - name: Set speed 100Mb/s
+      community.routeros.api_find_and_modify:
+        hostname: "{{ address }}"
+        password: "{{ ros_api_password }}"
+        username: "{{ ros_api_user }}"
+        path: interface ethernet
+        find:
+          name: "{{ item.name }}"
+        values:
+          advertise:
+            '10M-baseT-half,10M-baseT-full,100M-baseT-half,100M-baseT-full'
+          # - '1G-baseT-half'
+          # - '1G-baseT-full'
+      loop: "{{ hostvars[inventory_hostname]['bridge_port'] | selectattr('speed', 'defined') | selectattr('speed','equalto',100) }}"
