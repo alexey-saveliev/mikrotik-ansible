@@ -13,10 +13,9 @@ bridge_port:
     loop-protect: on
     speed: 100
   - name: ether3
-    comment: Default Config
-    pvid: 70
-    edge: yes
-    loop-protect: on
+    comment: 2-nd floor. Hall near elev. Unifi U7PM35
+    pvid: 10
+    tagged: [11,20,30,40,50,60,70,80,90,100]
   - name: ether4
     comment: Default Config
     pvid: 70
