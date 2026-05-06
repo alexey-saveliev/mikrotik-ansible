@@ -21,8 +21,8 @@ bridge_port:
     comment: 1D-G-09 A5000 Entrance
     pvid: 20
   - name: ether6
-    comment: Default Config
-    pvid: 20
+    comment: 1-st floor. TV VTZS.
+    pvid: 50
   - name: ether7
     comment: 1D-G-1 SKUD
     pvid: 20
@@ -30,8 +30,8 @@ bridge_port:
     comment: 1D-G-2 SKUD
     pvid: 20
   - name: ether9
-    comment: Default Config
-    pvid: 20
+    comment: 1-st floor. TV VTZS.
+    pvid: 50
   - name: ether10
     comment: Default Config
     pvid: 20
