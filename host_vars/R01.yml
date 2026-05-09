@@ -5,7 +5,7 @@ dhcp_server:
   - name: VLAN10
     interface: "VLAN10"
     network: "10.10.0.0/16"
-    dns: "10.10.0.2,10.10.0.3"
+    dns: "10.10.0.1"
     default_gateway: "10.10.0.1"
     lease_time: "1h"
     pool:
@@ -15,7 +15,7 @@ dhcp_server:
   - name: VLAN20
     interface: "VLAN20"
     network: "10.20.0.0/16"
-    dns: "10.20.0.2,10.20.0.3"
+    dns: "10.20.0.1"
     default_gateway: "10.20.0.1"
     lease_time: "1h"
     pool:
@@ -25,7 +25,7 @@ dhcp_server:
   - name: VLAN30
     interface: "VLAN30"
     network: "10.30.0.0/16"
-    dns: "10.30.0.2,10.30.0.3"
+    dns: "10.30.0.1"
     default_gateway: "10.30.0.1"
     lease_time: "1h"
     pool:
@@ -35,7 +35,7 @@ dhcp_server:
   - name: VLAN40
     interface: "VLAN40"
     network: "10.40.0.0/16"
-    dns: "10.40.0.2,10.40.0.3"
+    dns: "10.40.0.1"
     default_gateway: "10.40.0.1"
     lease_time: "1h"
     pool:
@@ -45,7 +45,7 @@ dhcp_server:
   - name: VLAN50
     interface: "VLAN50"
     network: "10.50.0.0/16"
-    dns: "10.50.0.2,10.50.0.3"
+    dns: "10.50.0.1"
     default_gateway: "10.50.0.1"
     lease_time: "1h"
     pool:
@@ -55,7 +55,7 @@ dhcp_server:
   - name: VLAN60
     interface: "VLAN60"
     network: "10.60.0.0/16"
-    dns: "10.60.0.2,10.60.0.3"
+    dns: "10.60.0.1"
     default_gateway: "10.60.0.1"
     lease_time: "1h"
     pool:
@@ -65,7 +65,7 @@ dhcp_server:
   - name: VLAN70
     interface: "VLAN70"
     network: "10.70.0.0/16"
-    dns: "10.70.0.2,10.70.0.3"
+    dns: "10.70.0.1"
     default_gateway: "10.70.0.1"
     lease_time: "1h"
     pool:
@@ -75,7 +75,7 @@ dhcp_server:
   - name: VLAN80
     interface: "VLAN80"
     network: "10.80.0.0/16"
-    dns: "10.80.0.2,10.80.0.3"
+    dns: "10.80.0.1"
     default_gateway: "10.80.0.1"
     lease_time: "1h"
     pool:
@@ -95,47 +95,58 @@ dhcp_server:
 
 bridge_port:
   - name: ether1
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether2
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether3
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether4
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether5
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether6
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether7
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether8
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether9
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether10
-    comment: Management
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether11
-    comment: Monitoring Server
+    comment: Trunk port
     pvid: 10
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: ether12
-    comment: U6M23
+    comment: Trunk port
     pvid: 10
-    tagged: [11,20,30,40,50,60,70,80,90,100]
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus3
     comment: Trunk port
     pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus4
     comment: Trunk port
     pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
+    tagged: [10,20,30,40,50,60,70,80,90]

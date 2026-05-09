@@ -1,74 +1,18 @@
 ---
-
 switches-ros7:
   hosts:
-    # R01:
-    #   address: 10.10.0.2
-    # R02:
-    #   address: 10.10.0.3
-    SW01: # Storm
-      address: 10.10.0.4
-    SW02: # Storm
-      address: 10.10.0.5
-    SW1DC01: # Storm
-      address: 10.10.0.6
-    SW1DC02: # Storm
-      address: 10.10.0.7
-    USW1A:
-      address: 10.10.0.12
-    USW1C:
-      address: 10.10.0.11
-    USW1D:
-      address: 10.10.0.13
-    USW1F:
-      address: 10.10.0.14
-    USW1E:
-      address: 10.10.0.15
-    USW2F:
-      address: 10.10.0.20
-    USW2A:
-      address: 10.10.0.21    
-    USW2H:
-      address: 10.10.0.22
-    USW2D:
-      address: 10.10.0.23    
-    USW2DEXPO:
-      address: 10.10.0.24
-    USW2CEXPO:
-      address: 10.10.0.25
-    USW2PBAR:
-      address: 10.10.0.26
-    USW2C:
-      address: 10.10.0.27    
-    USW2CAFE:
-      address: 10.10.0.29
-    USW3E:
-      address: 10.10.0.31
-    USW3F:
-      address: 10.10.0.32
-    USW3M:
-      address: 10.10.0.33
-    USW3K:
-      address: 10.10.0.36
-    USW3P:
-      address: 10.10.0.38
-    USW4C:
-      address: 10.10.0.41
-    USW4D:
-      address: 10.10.0.42
-    USW4E:
-      address: 10.10.0.43
+    R01:
+      address: 10.10.0.1
+    SW02:
+      address: 10.10.0.2
+    SW03:
+      address: 10.10.0.3
 
 dhcp-servers:
   hosts:
     R01:
-      address: 10.10.0.2
-    R02:
-      address: 10.10.0.3
-
+      address: 10.10.0.1
 dns-servers:
   hosts:
     R01:
-      address: 10.10.0.2
-    R02:
-      address: 10.10.0.3
+      address: 10.10.0.1

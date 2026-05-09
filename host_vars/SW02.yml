@@ -1,131 +1,123 @@
 ---
-# CRS328-24S+2Q+ SW02 specific settings
+# CRS326-24G-2S+ SW02 specific settings
 bridge_port:
-  - name: qsfpplus1-1
+  - name: ether1
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether2
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether3
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether4
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether5
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether6
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether7
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether8
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether9
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether10
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether11
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether12
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether13
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether14
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether15
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether16
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether17
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether18
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether19
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether20
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether21
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether22
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether23
     comment: Trunk port
     pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: qsfpplus1-2
+    tagged: [10,20,30,40,50,60,70,80,90]
+  - name: ether24
     comment: Trunk port
     pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: qsfpplus1-3
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: qsfpplus1-4
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: qsfpplus2-1
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: qsfpplus2-2
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: qsfpplus2-3
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: qsfpplus2-4
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus1
-    comment: R01
+    comment: Trunk port
     pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
+    tagged: [10,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus2
-    comment: R02
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus3
-    comment: SW1DC01
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus4
-    comment: SW1DC02
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus5
     comment: Trunk port
     pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus6
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus7
-    comment: USW1F
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus8
-    comment: USW1E
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus9
-    comment: USW3K
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus10
-    comment: USW2F
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus11
-    comment: USW4D
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus12
-    comment: USW4E
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus13
-    comment: USW2H
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus14
-    comment: USW4C
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus15
-    comment: USW3M
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus16
-    comment: USW3E
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus17
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus18
-    comment: USW3F
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus19
-    comment: USW3P
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus20
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus21
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus22
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus23
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90,100]
-  - name: sfp-sfpplus24
-    comment: USW4G
-    pvid: 10
-    tagged: [11,20,30,40,50,60,70,80,90,100]
+    tagged: [10,20,30,40,50,60,70,80,90]

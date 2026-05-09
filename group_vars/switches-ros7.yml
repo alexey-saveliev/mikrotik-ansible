@@ -20,23 +20,19 @@ bridge:
 bridge_vlan:
   - vlanid: 10
     comment: Management
-  - vlanid: 11
-    comment: Broadcast Backup
   - vlanid: 20
-    comment: A5KREG
+    comment: VLAN20
   - vlanid: 30
-    comment: VTZS
+    comment: VLAN30
   - vlanid: 40
-    comment: PRESS
+    comment: VLAN40
   - vlanid: 50
-    comment: TECH
+    comment: VLAN50
   - vlanid: 60
-    comment: SPEAKERS
+    comment: VLAN60
   - vlanid: 70
-    comment: EXPO
+    comment: VLAN70
   - vlanid: 80
-    comment: PARTNERS
+    comment: VLAN80
   - vlanid: 90
-    comment: RESERV90
-  - vlanid: 100
-    comment: ZDZ PTZ 
+    comment: VLAN90

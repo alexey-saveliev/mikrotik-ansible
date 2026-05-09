@@ -9,7 +9,7 @@
       username: "{{ ros_api_user }}"
       path: ip dns
       data:      
-        - servers: "10.10.0.2,10.10.0.3"
+        - servers: "10.10.0.1"
         
 - hosts: switches-ros7
   gather_facts: false
@@ -114,80 +114,11 @@
         path: ip dns static
         data:
           - name: R01
-            address: 10.10.0.2
-          - name: R02
-            address: 10.10.0.3
-          - name: SW01
-            address: 10.10.0.4
+            address: 10.10.0.1
           - name: SW02
-            address: 10.10.0.5
-          - name: SW1DC01
-            address: 10.10.0.6
-          - name: SW1DC02
-            address: 10.10.0.7
-          - name: monitor
-            address: 10.10.0.10
-          - name: USW1C
-            address: 10.10.0.11
-          - name: USW1A
-            address: 10.10.0.12
-          - name: USW1D
-            address: 10.10.0.13
-          - name: USW1F
-            address: 10.10.0.14
-          - name: USW1E
-            address: 10.10.0.15
-          - name: USW2F
-            address: 10.10.0.20
-          - name: USW2A
-            address: 10.10.0.21
-          - name: USW2H
-            address: 10.10.0.22
-          - name: USW2D
-            address: 10.10.0.23
-          - name: USW2DEXPO
-            address: 10.10.0.24
-          - name: USW2CEXPO
-            address: 10.10.0.25
-          - name: USW2PBAR
-            address: 10.10.0.26
-          - name: USW2C
-            address: 10.10.0.27
-          - name: USW2B
-            address: 10.10.0.28
-          - name: USW3E
-            address: 10.10.0.31
-          - name: USW3F
-            address: 10.10.0.32
-          - name: USW3M
-            address: 10.10.0.33
-          - name: USW3H
-            address: 10.10.0.34
-          - name: USW3G
-            address: 10.10.0.35
-          - name: USW3K
-            address: 10.10.0.36
-          - name: USW3R
-            address: 10.10.0.37
-          - name: USW3P
-            address: 10.10.0.38
-          - name: USW4C
-            address: 10.10.0.41
-          - name: USW4D
-            address: 10.10.0.42
-          - name: USW4E
-            address: 10.10.0.43
-          - name: USW4G
-            address: 10.10.0.47
-          - name: tv.finevid.link
-            address: 10.10.0.55
-          - name: vtzs.finevid.link
-            address: 10.10.0.55
-          - name: u26.pitq.ru
-            address: 10.20.127.98
-          
-          
-          
+            address: 10.10.0.2
+          - name: SW03
+            address: 10.10.0.3
       tags: dns
 
     
