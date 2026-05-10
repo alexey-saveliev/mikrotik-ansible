@@ -12,7 +12,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether3
-    comment: Êàìåðà Êîðèäîð â ñòîðîíó ðåíòãåíà
+    comment: Камера коридор в сторону рентгена
     pvid: 2
     edge: yes
     loop-protect: on
@@ -21,7 +21,7 @@ bridge_port:
     pvid: 2
     tagged: [2,4]
   - name: ether5
-    comment: Êàìåðà Reception
+    comment: Камера Reception
     pvid: 2
     edge: yes
     loop-protect: on
@@ -31,7 +31,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether7
-    comment: Êàìåðà Ðåíòãåí
+    comment: Камера Рентген
     pvid: 2
     edge: yes
     loop-protect: on
@@ -41,7 +41,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether9
-    comment: Êàìåðà Êàáèíåò ¹7
+    comment: Камера Кабинет №7
     pvid: 2
     edge: yes
     loop-protect: on
@@ -51,7 +51,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether11
-    comment: Êàìåðà Êàáèíåò ¹5
+    comment: Камера Кабинет №5
     pvid: 2
     edge: yes
     loop-protect: on
@@ -61,7 +61,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether13
-    comment: Êàìåðà Ñòåðèëèçàöèîííàÿ
+    comment: Камера Стерилизационная
     pvid: 2
     edge: yes
     loop-protect: on
@@ -86,7 +86,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether18
-    comment: Êàìåðà Îðäèíàòîðñêàÿ
+    comment: Камера Ординаторская
     pvid: 2
     edge: yes
     loop-protect: on
@@ -116,7 +116,7 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether24
-    comment: Êàìåðà Êàáèíåò ¹8
+    comment: Камера Кабинет №8
     pvid: 2
     edge: yes
     loop-protect: on
