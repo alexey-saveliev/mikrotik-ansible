@@ -5,4 +5,6 @@ bin/
 tmp/
 lib/
 pyvenv.cfg
+.venv/
+ansible.cfg
 .GScredentials.json

@@ -1,0 +1,294 @@
+---
+# CRS354-48P-4S+2Q+ USW2CEXPO specific settings
+
+bridge_port:
+  - name: ether1
+    comment: Uplink to CRS328POE-2 SFP-Plus4
+    pvid: 2
+    tagged: [2,4]
+  - name: ether2
+    comment: Default
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether3
+    comment: Êàìåðà Êîðèäîð â ñòîðîíó ðåíòãåíà
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether4
+    comment: Wi-Fi AP 10
+    pvid: 2
+    tagged: [2,4]
+  - name: ether5
+    comment: Êàìåðà Reception
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether6
+    comment: Default
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether7
+    comment: Êàìåðà Ðåíòãåí
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether8
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether9
+    comment: Êàìåðà Êàáèíåò ¹7
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether10
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether11
+    comment: Êàìåðà Êàáèíåò ¹5
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether12
+    comment: 7-1
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether13
+    comment: Êàìåðà Ñòåðèëèçàöèîííàÿ
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether14
+    comment: Default
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether15
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether16
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether17
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether18
+    comment: Êàìåðà Îðäèíàòîðñêàÿ
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether19
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether20
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether21
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether22
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether23
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether24
+    comment: Êàìåðà Êàáèíåò ¹8
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether25
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether26
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether27
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether28
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether29
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether30
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether31
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether32
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether33
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether34
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether35
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether36
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether37
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether38
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether39
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether40
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether41
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether42
+    comment: Default Config
+    pvid: w
+    edge: yes
+    loop-protect: on
+  - name: ether43
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether44
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether45
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether46
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether47
+    comment: Deafault
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether48
+    comment: Default
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether49
+    comment: Management port
+    pvid: 2
+  - name: qsfpplus1-1
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: qsfpplus1-2
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: qsfpplus1-3
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: qsfpplus1-4
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: qsfpplus2-1
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: qsfpplus2-2
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: qsfpplus2-3
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: qsfpplus2-4
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: sfp-sfpplus1
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: sfp-sfpplus2
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: sfp-sfpplus3
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: sfp-sfpplus4
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+
