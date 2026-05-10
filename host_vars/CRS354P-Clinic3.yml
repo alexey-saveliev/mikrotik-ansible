@@ -207,7 +207,7 @@ bridge_port:
     loop-protect: on
   - name: ether42
     comment: Default Config
-    pvid: w
+    pvid: 2
     edge: yes
     loop-protect: on
   - name: ether43
