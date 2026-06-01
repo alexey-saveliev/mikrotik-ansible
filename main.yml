@@ -9,7 +9,7 @@
       username: "{{ ros_api_user }}"
       path: ip dns
       data:      
-        - servers: "10.10.0.1"
+        - servers: "192.168.26.1"
         
 - hosts: switches-ros7
   gather_facts: false

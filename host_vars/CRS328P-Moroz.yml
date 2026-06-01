@@ -1,0 +1,136 @@
+---
+# CRS326-24G-2S+ CRS328P-Moroz specific settings
+bridge_port:
+  - name: ether1
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether2
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether3
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether4
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether5
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether6
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether7
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether8
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether9
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether10
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether11
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether12
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether13
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether14
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether15
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether16
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether17
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether18
+    comment: Wi-Fi Access Point
+    pvid: 2
+    tagged: [4]
+  - name: ether19
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether20
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether21
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether22
+    comment: Mikrotik-Archive ether1
+    pvid: 2
+    tagged: [2,4]
+  - name: ether23
+    comment: Default Config
+    pvid: 2
+    edge: yes
+    loop-protect: on
+  - name: ether24
+    comment: Uplink CRS328POE-2 ether20
+    pvid: 2
+    tagged: [2,4]
+  - name: sfp-sfpplus1
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: sfp-sfpplus2
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: sfp-sfpplus3
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]
+  - name: sfp-sfpplus4
+    comment: Trunk port
+    pvid: 2
+    tagged: [2,4]

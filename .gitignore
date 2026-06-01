@@ -6,5 +6,6 @@ tmp/
 lib/
 pyvenv.cfg
 .venv/
+.venv.bak/
 ansible.cfg
 .GScredentials.json
