@@ -236,6 +236,51 @@
         path: interface bridge port
         data: "{{ routeros_edge_data }}"
 
+- name: Set storm rate
+  block:
+    - name: Get all ethernet switch ports
+      community.routeros.api_info:
+        hostname: "{{ address }}"
+        password: "{{ ros_api_password }}"
+        username: "{{ ros_api_user }}"
+        path: interface ethernet switch port
+      register: storm_all_device_ports
+
+    - name: Get bridge members
+      community.routeros.api_info:
+        hostname: "{{ address }}"
+        password: "{{ ros_api_password }}"
+        username: "{{ ros_api_user }}"
+        path: interface bridge port
+      register: storm_all_bridge_ports
+
+    - name: Create list of bridge member interfaces
+      set_fact:
+        bridge_member_interfaces: "{{ storm_all_bridge_ports.result | selectattr('bridge', 'equalto', hostvars[inventory_hostname].bridge.name) | map(attribute='interface') | list }}"
+
+    - name: Build storm rate configuration data
+      set_fact:
+        storm_rate_data: "{{ storm_rate_data | default([]) + [ {
+          'name': item,
+          'limit-unknown-multicasts': 'yes' if item in bridge_member_interfaces else 'no',
+          'limit-unknown-unicasts': 'yes' if item in bridge_member_interfaces else 'no',
+          'storm-rate': 5 if item in bridge_member_interfaces else 100
+        } ] }}"
+      loop: "{{ storm_all_device_ports.result | map(attribute='name') | list }}"
+
+    # - name: Print storm_rate_data
+    #   ansible.builtin.debug:
+    #     var: storm_rate_data
+    
+    - name: Apply storm protect configuration
+      community.routeros.api_modify:
+        hostname: "{{ address }}"
+        password: "{{ ros_api_password }}"
+        username: "{{ ros_api_user }}"
+        path: interface ethernet switch port
+        data: "{{ storm_rate_data }}"
+
+
 - name: Set speed on interfaces
   block:
     - name: Set speed 100Mb/s

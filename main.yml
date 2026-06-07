@@ -63,32 +63,7 @@
                     3061326439343530620a303135616331616265383265643138613039383963393231616361623062
                     3937
     tags: prometheus
-  
-  - name: Get all ethernet interfaces
-    community.routeros.api_info:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface ethernet
-    register: interfaces
-    tags: storm
-  
-  - name: Set storm rate
-    community.routeros.api_find_and_modify:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface ethernet switch port
-      find:
-        # name: "{{ item.name }}"
-        switch: "switch1"
-      values:        
-        limit-unknown-multicasts: yes
-        limit-unknown-unicasts: yes
-        storm-rate: 5
-    # loop: "{{ interfaces.result }}"
-
-
+          
 - hosts: dhcp-servers
   gather_facts: false
   
