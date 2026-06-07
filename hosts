@@ -1,18 +1,22 @@
 ---
 switches-ros7:
   hosts:
-    R01:
-      address: 10.10.0.1
-    SW02:
-      address: 10.10.0.2
-    SW03:
-      address: 10.10.0.3
+    # BR01:
+    #   address: 10.110.0.2
+    SW216-1:
+      address: 10.110.0.4
+    SW216-2:
+      address: 10.110.0.5
+    USWSL:
+      address: 10.110.0.22
+    USWF:
+      address: 10.110.0.23
 
-dhcp-servers:
-  hosts:
-    R01:
-      address: 10.10.0.1
-dns-servers:
-  hosts:
-    R01:
-      address: 10.10.0.1
+# dhcp-servers:
+#   hosts:
+#     BR01:
+#       address: 10.110.0.2
+# dns-servers:
+#   hosts:
+#     BR01:
+#       address: 10.110.0.2
