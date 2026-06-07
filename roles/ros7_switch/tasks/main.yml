@@ -40,40 +40,18 @@
         comment: "{{ item.comment }}"
         bridge: "{{ hostvars[inventory_hostname]['bridge'].name }}"
 
-- name: Update VLAN settings
-  loop: "{{ hostvars[inventory_hostname]['bridge_vlan'] }}"
-  community.routeros.api_find_and_modify:
+- name: Prepare VLAN entries accumulated
+  set_fact:
+    vlan_entries: "{{ vlan_entries | default([]) + [{'bridge': bridge.name, 'vlan-ids': item.vlanid, 'comment': item.comment}] }}"
+  loop: "{{ bridge_vlan }}"
+
+- name: Update VLAN settings with single api_modify call
+  community.routeros.api_modify:
     hostname: "{{ address }}"
     password: "{{ ros_api_password }}"
     username: "{{ ros_api_user }}"
-    ignore_dynamic: true
     path: interface bridge vlan
-    find: >-
-      {{
-        dict([
-          ['bridge', hostvars[inventory_hostname]['bridge'].name],
-          ['vlan-ids', item.vlanid]
-        ])
-
-      }}      
-    values:
-      comment: "{{ item.comment }}"
-
-# - name: Print hostvars bridge_port
-#   ansible.builtin.debug:
-#     var: hostvars[inventory_hostname]['bridge_port']
-
-# - name: Print hostvars bridge_port filtered
-#   ansible.builtin.debug:
-#     # msg: "{{ hostvars[inventory_hostname]['bridge_port'] | community.general.json_query('[].[?pvid==100].name') }}"
-#     msg: >-
-#       "{{ hostvars[inventory_hostname]['bridge_port']
-#       | selectattr ('tagged','defined')
-#       | selectattr ('tagged','contains',110)
-#       | map(attribute='name') | join(',')
-#       }}"
-#   tags:
-#     - bridge-port
+    data: "{{ vlan_entries }}"
 
 - name: Get bridge port info
   community.routeros.api_info:
@@ -84,12 +62,6 @@
   register: interface_bridge_port
   tags:
     - bridge-port
-
-# - name: Print bridge port
-#   ansible.builtin.debug:
-#     var: interface_bridge_port
-#   tags:
-#     - bridge-port
 
 - name: Add ports to bridge
   loop: "{{ hostvars[inventory_hostname]['bridge_port'] }}"
@@ -175,25 +147,29 @@
 #   tags:
 #     - bridge-port
 
-- name: Update physical interfaces comments
+- name: Initialize interface comments update list
+  set_fact:
+    interface_comments_update: []
+  tags:
+    - bridge-port
+
+- name: Prepare interface comments update data with default-name
+  set_fact:
+    interface_comments_update: "{{ interface_comments_update + [{
+        'default-name': item.name,
+        'comment': item.comment
+      }] }}"
   loop: "{{ hostvars[inventory_hostname]['bridge_port'] }}"
-  # Условие с selectattr ставить нельзя т.К. атрибут comment может быть не определен
-  # when: >- 
-  #   (interface_ethernet.result
-  #   | selectattr('name','eq',item.name)
-  #   | selectattr('comment','eq',item.comment) | length) == 0
-  community.routeros.api_find_and_modify:
+  when: item.name is defined and item.comment is defined
+
+- name: Update physical interfaces comments
+  community.routeros.api_modify:
     hostname: "{{ address }}"
     password: "{{ ros_api_password }}"
     username: "{{ ros_api_user }}"
     path: interface ethernet
-    find:
-      name: "{{ item.name }}"
-    values:
-      comment: "{{ item.comment }}"        
-  tags:
-    - bridge-port
-
+    data: "{{ interface_comments_update }}"
+    
 - name: Set VLAN tagged ports
   loop: "{{ hostvars[inventory_hostname]['bridge_vlan'] }}"
   community.routeros.api_find_and_modify:
