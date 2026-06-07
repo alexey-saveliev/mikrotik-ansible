@@ -193,107 +193,48 @@
 
 - name: Set loop-protect
   block:
-  - name: Process interfaces with explicit loop-protect=yes
-    community.routeros.api_find_and_modify:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface ethernet
-      find:
-        name: "{{ item.name }}"
-      values:
-        loop-protect: 'on'
-    loop: "{{ hostvars[inventory_hostname]['bridge_port'] | selectattr('loop-protect', 'defined') | selectattr('loop-protect','equalto',true) | list }}"
+    - name: Build loop-protect data
+      set_fact:
+        routeros_loop_protect_data: "{{ routeros_loop_protect_data | default([]) + [ {
+          'default-name': item.name,
+          'loop-protect': (
+            'on' if item.get('loop-protect') is sameas true
+            else 'off' if item.get('loop-protect') is sameas false
+            else 'default'
+          )
+        } ] }}"
+      loop: "{{ hostvars[inventory_hostname]['bridge_port'] }}"
 
-  - name: Process interfaces with explicit loop-protect=no
-    community.routeros.api_find_and_modify:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface ethernet
-      find:
-        name: "{{ item.name }}"
-      values:
-        # 'on' {% elif item['loop-protect']==false %} 'off' {% else %} 'default' {% endif %}"
-        loop-protect: 'off'
-    loop: "{{ hostvars[inventory_hostname]['bridge_port'] | selectattr('loop-protect', 'defined') | selectattr('loop-protect','equalto',false) | list }}"
-
-  - name: Process interfaces with explicit loop-protect=default
-    community.routeros.api_find_and_modify:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface ethernet
-      find:
-        name: "{{ item.name }}"
-      values:
-        # 'on' {% elif item['loop-protect']==false %} 'off' {% else %} 'default' {% endif %}"
-        loop-protect: 'default'
-    loop: "{{ hostvars[inventory_hostname]['bridge_port'] | selectattr('loop-protect', 'defined') | selectattr('loop-protect','equalto','default') | list }}"
-
-  - name: Process interfaces with loop-protect not set
-    community.routeros.api_find_and_modify:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface ethernet
-      find:
-        name: "{{ item.name }}"
-      values:
-        loop-protect: 'default'
-    loop: "{{ hostvars[inventory_hostname]['bridge_port'] | rejectattr('loop-protect', 'defined') | list }}"
-
+    - name: Apply loop-protect once
+      community.routeros.api_modify:
+        hostname: "{{ address }}"
+        username: "{{ ros_api_user }}"
+        password: "{{ ros_api_password }}"
+        path: interface ethernet
+        data: "{{ routeros_loop_protect_data }}"
 
 - name: Set edge
   block:
-  - name: Process interfaces with explicit edge=yes
-    community.routeros.api_find_and_modify:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface bridge port
-      find:
-        interface: "{{ item.name }}"
-      values:
-        bridge: 'bridge'
-        edge: 'yes'
-    loop: "{{ hostvars[inventory_hostname]['bridge_port'] | selectattr('edge', 'defined') | selectattr('edge','equalto',true) | list }}"
-
-  - name: Process interfaces with explicit edge=no
-    community.routeros.api_find_and_modify:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface bridge port
-      find:
-        interface: "{{ item.name }}"
-      values:            
-        edge: 'no'
-    loop: "{{ hostvars[inventory_hostname]['bridge_port'] | selectattr('edge', 'defined') | selectattr('edge','equalto',false) | list }}"
-
-  - name: Process interfaces with explicit edge=auto
-    community.routeros.api_find_and_modify:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface bridge port
-      find:
-        interface: "{{ item.name }}"
-      values:            
-        edge: 'auto'
-    loop: "{{ hostvars[inventory_hostname]['bridge_port'] | selectattr('edge', 'defined') | selectattr('edge','equalto','auto') | list }}"
-
-  - name: Process interfaces with edge not set
-    community.routeros.api_find_and_modify:
-      hostname: "{{ address }}"
-      password: "{{ ros_api_password }}"
-      username: "{{ ros_api_user }}"
-      path: interface bridge port
-      find:
-        interface: "{{ item.name }}"
-      values:
-        edge: 'auto'
-    loop: "{{ hostvars[inventory_hostname]['bridge_port'] | rejectattr('edge', 'defined') | list }}"
+    - name: Build edge data
+      set_fact:
+        routeros_edge_data: "{{ routeros_edge_data | default([]) + [ {
+          'interface': item.name,
+          'bridge': hostvars[inventory_hostname].bridge.name,
+          'edge': (
+            'yes' if item.get('loop-protect') is sameas true
+            else 'no' if item.get('loop-protect') is sameas false
+            else 'auto'
+          )
+        } ] }}"
+      loop: "{{ hostvars[inventory_hostname]['bridge_port'] }}"
+    
+    - name: Apply edge settings
+      community.routeros.api_modify:
+        hostname: "{{ address }}"
+        username: "{{ ros_api_user }}"
+        password: "{{ ros_api_password }}"
+        path: interface bridge port
+        data: "{{ routeros_edge_data }}"
 
 - name: Set speed on interfaces
   block:
