@@ -13,6 +13,9 @@ switches-ros7:
       address: 10.110.0.22
     USWF:
       address: 10.110.0.23
+    USWSR:
+      address: 10.110.0.24
+
 
 # dhcp-servers:
 #   hosts:
