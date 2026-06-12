@@ -1,0 +1,81 @@
+---
+# CRS326-24G-2S+ USWT specific settings
+bridge_port:
+  - name: ether1
+    comment: Default Config
+    profile: Management
+  - name: ether2
+    comment: Default Config
+    profile: Management
+  - name: ether3
+    comment: Default Config
+    profile: Management
+  - name: ether4
+    comment: Default Config
+    profile: Management
+  - name: ether5
+    comment: Default Config
+    profile: Management
+  - name: ether6
+    comment: Default Config
+    profile: Management
+  - name: ether7
+    comment: Default Config
+    profile: Management
+  - name: ether8
+    comment: Default Config
+    profile: Management
+  - name: ether9
+    comment: Default Config
+    profile: Management
+  - name: ether10
+    comment: Default Config
+    profile: Management
+  - name: ether11
+    comment: Default Config
+    profile: Management
+  - name: ether12
+    comment: Default Config
+    profile: Management
+  - name: ether13
+    comment: Default Config
+    profile: Management
+  - name: ether14
+    comment: Default Config
+    profile: Management
+  - name: ether15
+    comment: Default Config
+    profile: Management
+  - name: ether16
+    comment: Default Config
+    profile: Management
+  - name: ether17
+    comment: Trunk Native VLAN 10
+    profile: WiFi
+  - name: ether18
+    comment: Trunk Native VLAN 10
+    profile: WiFi
+  - name: ether19
+    comment: Trunk Native VLAN 10
+    profile: WiFi
+  - name: ether20
+    comment: Trunk Native VLAN 10
+    profile: WiFi
+  - name: ether21
+    comment: Trunk Native VLAN 10
+    profile: WiFi
+  - name: ether22
+    comment: Trunk Native VLAN 10
+    profile: WiFi
+  - name: ether23
+    comment: Trunk Native VLAN 10
+    profile: WiFi
+  - name: ether24
+    comment: Trunk Native VLAN 10
+    pvid: 99
+  - name: sfp-sfpplus1
+    comment: Trunk port
+    profile: Trunk
+  - name: sfp-sfpplus2
+    comment: Trunk port
+    profile: Trunk

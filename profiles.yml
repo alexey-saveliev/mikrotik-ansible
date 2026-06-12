@@ -1,0 +1,63 @@
+---
+
+- hosts: switches-ros7
+  gather_facts: false
+  
+  tasks:
+  - name: Save original bridge_port
+    ansible.builtin.set_fact:
+      bridge_port_original: "{{ bridge_port }}"
+    when: bridge_port_original is not defined
+
+  - name: Build port profile lookup table
+    ansible.builtin.set_fact:
+      port_profile_map: "{{ dict(port_profile | map(attribute='name') | zip(port_profile)) }}"
+
+  - name: Fail if bridge_port references unknown profile
+    ansible.builtin.fail:
+      msg: "Port {{ item.name }} references unknown profile '{{ item.profile }}'"
+    loop: "{{ bridge_port_original }}"
+    when:
+      - "'profile' in item"
+      - item['profile'] not in port_profile_map
+
+  - name: Reset temporary bridge_port list
+    ansible.builtin.set_fact:
+      bridge_port_merged: []
+
+  - name: Merge matching profile settings into bridge_port items
+    ansible.builtin.set_fact:
+      bridge_port_merged: >-
+        {{
+          bridge_port_merged +
+          [
+            (
+              (
+                port_profile_map[item['profile']]
+                | dict2items
+                | rejectattr('key', 'equalto', 'name')
+                | items2dict
+              )
+              | combine(item, recursive=True)
+            )
+            if 'profile' in item
+            else item
+          ]
+        }}
+    loop: "{{ bridge_port_original }}"
+    loop_control:
+      label: "{{ item.name | default('unknown') }}"
+
+  - name: Replace original bridge_port variable
+    ansible.builtin.set_fact:
+      bridge_port: "{{ bridge_port_merged }}"
+  
+  - name: Remove temporary variables
+    ansible.builtin.set_fact:
+      bridge_port_original: null
+      bridge_port_merged: null
+      port_profile_map: null
+
+  - name: Print hostvars
+    ansible.builtin.debug:
+      var: hostvars[inventory_hostname]
