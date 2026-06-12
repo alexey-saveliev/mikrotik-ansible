@@ -1,5 +1,5 @@
 ---
-# CRS326-24G-2S+ USWF specific settings
+# CRS326-24G-2S+ USW3316 specific settings
 bridge_port:
   - name: ether1
     comment: Default Config
