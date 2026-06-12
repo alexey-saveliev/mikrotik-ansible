@@ -7,6 +7,8 @@ switches-ros7:
       address: 10.110.0.4
     SW216-2:
       address: 10.110.0.5
+    USW216:
+      address: 10.110.0.21
     USWSL:
       address: 10.110.0.22
     USWF:

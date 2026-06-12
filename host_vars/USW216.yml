@@ -38,58 +38,174 @@ bridge_port:
     comment: Default Config
     pvid: 50
   - name: ether13
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 50
   - name: ether14
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 50
   - name: ether15
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 50
   - name: ether16
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 50
   - name: ether17
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 50
   - name: ether18
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 50
   - name: ether19
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 50
   - name: ether20
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Default Config
+    pvid: 50
   - name: ether21
-    comment: Trunk Native VLAN 10
-    pvid: 10
-    tagged: [20,30,40,50,60,70,80,90]
+    comment: Printer Pult Boilernaya
+    pvid: 50
   - name: ether22
+    comment: Default Config
+    pvid: 50
+  - name: ether23
+    comment: Default Config
+    pvid: 50
+  - name: ether24
+    comment: Default Config
+    pvid: 50
+  - name: ether25
+    comment: Default Config
+    pvid: 50
+  - name: ether26
+    comment: Printer Pult Boilernaya
+    pvid: 50
+  - name: ether27
+    comment: Default Config
+    pvid: 50
+  - name: ether28
+    comment: Default Config
+    pvid: 50
+  - name: ether29
+    comment: Default Config
+    pvid: 50
+  - name: ether30
+    comment: Default Config
+    pvid: 50
+  - name: ether31
+    comment: Printer Pult Boilernaya
+    pvid: 50
+  - name: ether32
+    comment: Default Config
+    pvid: 50
+  - name: ether33
+    comment: Default Config
+    pvid: 50
+  - name: ether34
+    comment: Default Config
+    pvid: 50
+  - name: ether35
+    comment: Default Config
+    pvid: 50
+  - name: ether36
+    comment: Default Config
+    pvid: 50
+  - name: ether37
     comment: Trunk Native VLAN 10
     pvid: 10
     tagged: [20,30,40,50,60,70,80,90]
-  - name: ether23
+  - name: ether38
     comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
-  - name: ether24
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether39
     comment: Trunk Native VLAN 10
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether40
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether41
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether42
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether43
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether44
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether45
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether46
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether47
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether48
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether49
+    comment: Management port
+    pvid: 10
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus3
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: sfp-sfpplus4
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus1-1
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus1-2
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus1-3
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus1-4
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus2-1
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus2-2
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus2-3
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  - name: qsfpplus2-4
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+  
