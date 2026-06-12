@@ -3,10 +3,10 @@ switches-ros7:
   hosts:
     # BR01:
     #   address: 10.110.0.2
-    # SW2313-1:
-    #   address: 10.10.0.4
-    # SW2313-2:
-    #   address: 10.10.0.5
+    SW2313-1:
+      address: 10.10.0.4
+    SW2313-2:
+      address: 10.10.0.5
     USWREG-F:
       address: 10.10.0.13
     USWREG-O:
