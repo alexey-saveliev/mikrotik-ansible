@@ -43,7 +43,7 @@
       path: user group
       data:      
         - name: "prometheus"
-          policy: "read,api"
+          policy: "read,api,!local,!telnet,!ssh,!ftp,!reboot,!write,!policy,!test,!winbox,!password,!web,!sniff,!sensitive,!romon,!rest-api"
     tags: prometheus
   
   - name: Add prometheus user
