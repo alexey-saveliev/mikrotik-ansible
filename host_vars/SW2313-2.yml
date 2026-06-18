@@ -1,5 +1,10 @@
 ---
-# SW02 specific settings
+# SW2313-2 specific settings
+bridge:
+  name: bridge
+  stp:
+    priority: "0x3000" # Bridge STP priority value. Must be string in quotes!
+
 bridge_port:
   - name: qsfpplus1-1
     comment: Trunk port
