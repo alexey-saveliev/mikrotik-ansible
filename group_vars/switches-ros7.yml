@@ -35,6 +35,6 @@ bridge_vlan:
   - vlanid: 70
     comment: VLAN 70
   - vlanid: 80
-    comment: VLAN 80
+    comment: PARTNERS
   - vlanid: 90
     comment: Public WiFi
