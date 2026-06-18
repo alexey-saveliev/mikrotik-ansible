@@ -43,7 +43,8 @@
       path: user group
       data:      
         - name: "prometheus"
-          policy: "read,api"
+          # Need to specify full policy string. Otherwise task always returns changed.
+          policy: "read,api,!local,!telnet,!ssh,!ftp,!reboot,!write,!policy,!test,!winbox,!password,!web,!sniff,!sensitive,!romon,!rest-api"
     tags: prometheus
   
   - name: Add prometheus user
@@ -52,7 +53,7 @@
       password: "{{ ros_api_password }}"
       username: "{{ ros_api_user }}"
       path: user
-      data:      
+      data:
         - name: "prometheus"
           group: "prometheus"
           password: !vault |
@@ -62,6 +63,7 @@
                     38616536643263306532343766636633346264363930343863373939336566663965653333313061
                     3061326439343530620a303135616331616265383265643138613039383963393231616361623062
                     3937
+    
     tags: prometheus
           
 - hosts: dhcp-servers
