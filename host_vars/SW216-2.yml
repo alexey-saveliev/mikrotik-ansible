@@ -1,5 +1,9 @@
 ---
 # CRS309-1G-8S+ SW216-2 specific settings
+bridge:
+  name: bridge
+  stp:
+    priority: "0x3000" # Bridge STP priority value. Must be string in quotes!
 bridge_port:
   - name: sfp-sfpplus1
     comment: Default Config
