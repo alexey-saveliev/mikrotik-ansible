@@ -25,16 +25,16 @@ bridge_vlan:
   - vlanid: 20
     comment: SKUD
   - vlanid: 30
-    comment: ORG
+    comment: ORGandSPK
   - vlanid: 40
     comment: PRESS
   - vlanid: 50
     comment: TECH
   - vlanid: 60
-    comment: VIP
+    comment: VLAN 60
   - vlanid: 70
     comment: VLAN 70
   - vlanid: 80
-    comment: VLAN 80
+    comment: PARTNERS
   - vlanid: 90
     comment: Public WiFi

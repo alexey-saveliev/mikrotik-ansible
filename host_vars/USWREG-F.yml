@@ -3,82 +3,82 @@
 bridge_port:
   - name: ether1
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether2
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether3
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether4
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether5
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether6
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether7
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether8
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether9
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether10
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether11
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether12
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether13
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether14
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether15
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether16
     comment: Default Config
-    pvid: 10
+    pvid: 20
     edge: yes
     loop-protect: on
   - name: ether17
