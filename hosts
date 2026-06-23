@@ -33,6 +33,8 @@ switches-ros7:
       address: 10.10.0.42
     USW5104:
       address: 10.10.0.51
+    USW5117:
+      address: 10.10.0.52
 
 # dhcp-servers:
 #   hosts:
