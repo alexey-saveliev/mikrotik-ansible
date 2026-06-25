@@ -57,8 +57,8 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether12
-    comment: Default Config
-    pvid: 30
+    comment: 5-th floor RBC Press Stand
+    pvid: 50
     edge: yes
     loop-protect: on
   - name: ether13
