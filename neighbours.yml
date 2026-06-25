@@ -1,0 +1,89 @@
+---
+- name: Collect LLDP neighbours from MikroTik physical ports
+  hosts: all
+  gather_facts: false
+
+  vars:
+    report_file: "./lldp_report.txt"
+
+  module_defaults:
+    community.routeros.api:
+      hostname: "{{ address }}"
+      username: "{{ ros_api_user }}"
+      password: "{{ ros_api_password }}"
+
+  pre_tasks:
+    - name: Create empty report file
+      ansible.builtin.copy:
+        dest: "{{ report_file }}"
+        content: ""
+      delegate_to: localhost
+      run_once: true
+
+  tasks:
+    - name: Get LLDP neighbours
+      community.routeros.api:
+        path: ip neighbor
+      register: lldp_neighbors
+
+    - name: Get interfaces
+      community.routeros.api:
+        path: interface
+      register: interfaces
+
+    - name: Build interface comment map
+      ansible.builtin.set_fact:
+        interface_comments: >-
+          {{
+            dict(
+              interfaces.msg
+              | map(attribute='name')
+              | zip(interfaces.msg | map(attribute='comment', default=''))
+            )
+          }}
+
+    - name: Build LLDP rows from physical ports only
+      ansible.builtin.set_fact:
+        lldp_rows: >-
+          {{
+            (lldp_rows | default([]))
+            +
+            [{
+              'device': inventory_hostname,
+              'port': port_name,
+              'comment': interface_comments.get(port_name, ''),
+              'neighbor': item.identity | default('')
+            }]
+          }}
+      vars:
+        port_name: "{{ item.interface | default('') | regex_replace(',.*$', '') }}"
+      loop: >-
+        {{
+          lldp_neighbors.msg
+          | selectattr('interface', 'defined')
+          | selectattr('identity', 'defined')
+          | selectattr('interface', 'match', '^(ether|sfp|qsfp)')
+          | list
+        }}
+
+  post_tasks:
+    - name: Write LLDP report
+      ansible.builtin.copy:
+        dest: "{{ report_file }}"
+        content: |
+          +----------------------+----------------------+------------------------------+----------------------+
+          | Device               | Port                 | Port Comment                 | Neighbor             |
+          +----------------------+----------------------+------------------------------+----------------------+
+          {% for host in ansible_play_hosts -%}
+          {% for row in hostvars[host].lldp_rows | default([]) -%}
+          | {{ '%-20.20s' | format(row.device | default('')) }} | {{ '%-20.20s' | format(row.port | default('')) }} | {{ '%-28.28s' | format(row.comment | default('')) }} | {{ '%-20.20s' | format(row.neighbor | default('')) }} |
+          {% endfor -%}
+          {% endfor -%}
+          +----------------------+----------------------+------------------------------+----------------------+
+      delegate_to: localhost
+      run_once: true
+
+    - name: Show report location
+      ansible.builtin.debug:
+        msg: "LLDP report saved to {{ report_file }}"
+      run_once: true
