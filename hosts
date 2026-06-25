@@ -27,6 +27,8 @@ switches-ros7:
       address: 10.10.0.33
     USW3316:
       address: 10.10.0.34
+    USW3302:
+      address: 10.10.0.35
     USW4201:
       address: 10.10.0.41
     USW4317:
