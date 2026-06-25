@@ -71,35 +71,35 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus9
-    comment: Trunk port
+    comment: USW2313
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus10
-    comment: Trunk port
+    comment: USW5117
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus11
-    comment: Trunk port
+    comment: USW4317
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus12
-    comment: Trunk port
+    comment: USW3316
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus13
-    comment: Trunk port
+    comment: USW3210
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus14
-    comment: Trunk port
+    comment: USW4201
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus15
-    comment: Trunk port
+    comment: USW3313
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus16
-    comment: Trunk port
+    comment: USW2216
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus17
@@ -107,7 +107,7 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus18
-    comment: Trunk port
+    comment: USW3105
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus19
@@ -115,7 +115,7 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus20
-    comment: Trunk port
+    comment: USW5104
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus21
@@ -123,14 +123,17 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus22
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90]
+    comment: 3105 Broadcast Backup
+    pvid: 11
+    edge: yes
+    loop-protect: on
   - name: sfp-sfpplus23
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90]
+    comment: 3210 Broadcast Backup
+    pvid: 11
+    edge: yes
+    loop-protect: on
   - name: sfp-sfpplus24
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90]
+    comment: 3316 Broadcast Backup
+    pvid: 11
+    edge: yes
+    loop-protect: on
