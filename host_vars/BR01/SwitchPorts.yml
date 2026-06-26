@@ -46,9 +46,10 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: ether12
-    comment: Trunk port
+    comment: Management port
     pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90]
+    edge: yes
+    loop-protect: on
   - name: ether13
     comment: Management port
     pvid: 10

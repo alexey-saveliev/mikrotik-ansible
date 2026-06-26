@@ -1,0 +1,20 @@
+---
+ip_addresses:
+  - interface: sfp-sfpplus1
+    address: "176.208.94.226/28"
+  - interface: VLAN20
+    address: 10.120.0.2/16
+  - interface: VLAN30
+    address: 10.130.0.2/16
+  - interface: VLAN40
+    address: 10.140.0.2/16
+  - interface: VLAN50
+    address: 10.150.0.2/16
+  - interface: VLAN60
+    address: 10.160.0.2/16
+  - interface: VLAN70
+    address: 10.170.0.2/16
+  - interface: VLAN80
+    address: 10.180.0.2/16
+  - interface: VLAN90
+    address: 10.190.0.2/16
