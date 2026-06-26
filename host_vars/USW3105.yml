@@ -2,12 +2,12 @@
 # CRS326-24G-2S+ USW3105 specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
+    comment: Pult service network
     pvid: 50
     edge: yes
     loop-protect: on
   - name: ether2
-    comment: Default Config
+    comment: Pult service network
     pvid: 50
     edge: yes
     loop-protect: on
