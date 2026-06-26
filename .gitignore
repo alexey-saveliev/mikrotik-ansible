@@ -6,3 +6,5 @@ tmp/
 lib/
 pyvenv.cfg
 .GScredentials.json
+*.bak
+lldp_report.txt
