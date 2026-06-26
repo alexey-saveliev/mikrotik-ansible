@@ -1,0 +1,29 @@
+---
+interfaces_vlan:
+  - name: VLAN10
+    comment: VLAN10
+    vlan-id: 10
+  - name: VLAN20
+    comment: VLAN20
+    vlan-id: 20
+  - name: VLAN30
+    comment: VLAN30
+    vlan-id: 30
+  - name: VLAN40
+    comment: VLAN40
+    vlan-id: 40
+  - name: VLAN50
+    comment: VLAN50
+    vlan-id: 50
+  - name: VLAN60
+    comment: VLAN60
+    vlan-id: 60
+  - name: VLAN70
+    comment: VLAN70
+    vlan-id: 70
+  - name: VLAN80
+    comment: VLAN80
+    vlan-id: 80
+  - name: VLAN90
+    comment: VLAN90
+    vlan-id: 90

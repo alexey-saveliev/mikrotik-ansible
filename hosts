@@ -16,6 +16,10 @@ switches-ros7:
     USWSR:
       address: 10.110.0.24
 
+routers-ros7:
+  hosts:
+    BR01:
+      address: 10.110.0.2
 
 dhcp-servers:
   hosts:
