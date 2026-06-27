@@ -2,6 +2,10 @@
 ip_addresses:
   - interface: sfp-sfpplus1
     address: "176.208.94.226/28"
+  - interface: VLAN10
+    address: 10.110.0.2/16
+  - interface: VLAN11
+    address: 10.111.0.2/16
   - interface: VLAN20
     address: 10.120.0.2/16
   - interface: VLAN30
@@ -18,3 +22,23 @@ ip_addresses:
     address: 10.180.0.2/16
   - interface: VLAN90
     address: 10.190.0.2/16
+  - interface: VRRP10
+    address: 10.110.0.1/16
+  - interface: VRRP11
+    address: 10.111.0.1/16
+  - interface: VRRP20
+    address: 10.120.0.1/16
+  - interface: VRRP30
+    address: 10.130.0.1/16
+  - interface: VRRP40
+    address: 10.140.0.1/16
+  - interface: VRRP50
+    address: 10.150.0.1/16
+  - interface: VRRP60
+    address: 10.160.0.1/16
+  - interface: VRRP70
+    address: 10.170.0.1/16
+  - interface: VRRP80
+    address: 10.180.0.1/16
+  - interface: VRRP90
+    address: 10.190.0.1/16
