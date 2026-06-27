@@ -71,13 +71,13 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether15
-    comment: Default Config
-    pvid: 80
+    comment: 3w02(10203) - Broadcast under stairs
+    pvid: 10
     edge: yes
     loop-protect: on
   - name: ether16
-    comment: Default Config
-    pvid: 80
+    comment: 3v02(10203) - Service network under stairs
+    pvid: 50
     edge: yes
     loop-protect: on
   - name: ether17
