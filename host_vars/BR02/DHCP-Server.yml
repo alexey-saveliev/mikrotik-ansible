@@ -1,0 +1,94 @@
+---
+# BR01 DHCP server settings
+
+dhcp_server:
+  - name: VLAN10
+    interface: "VLAN10"
+    network: "10.110.0.0/16"
+    dns: "10.110.0.1"
+    default_gateway: "10.110.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN10
+      ranges:
+        - "10.110.128.0-10.110.255.254"
+  - name: VLAN20
+    interface: "VLAN20"
+    network: "10.120.0.0/16"
+    dns: "10.120.0.1"
+    default_gateway: "10.120.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN20
+      ranges:
+        - "10.120.128.0-10.120.255.254"
+  - name: VLAN30
+    interface: "VLAN30"
+    network: "10.130.0.0/16"
+    dns: "10.130.0.1"
+    default_gateway: "10.130.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN30
+      ranges:
+        - "10.130.128.0-10.130.255.254"
+  - name: VLAN40
+    interface: "VLAN40"
+    network: "10.140.0.0/16"
+    dns: "10.140.0.1"
+    default_gateway: "10.140.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN40
+      ranges:
+        - "10.140.128.0-10.140.255.254"
+  - name: VLAN50
+    interface: "VLAN50"
+    network: "10.150.0.0/16"
+    dns: "10.150.0.1"
+    default_gateway: "10.150.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN50
+      ranges:
+        - "10.150.128.0-10.150.255.254"
+  - name: VLAN60
+    interface: "VLAN60"
+    network: "10.160.0.0/16"
+    dns: "10.160.0.1"
+    default_gateway: "10.160.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN60
+      ranges:
+        - "10.160.128.0-10.160.255.254"
+  - name: VLAN70
+    interface: "VLAN70"
+    network: "10.170.0.0/16"
+    dns: "10.170.0.1"
+    default_gateway: "10.170.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN70
+      ranges:
+        - "10.170.128.0-10.170.255.254"
+  - name: VLAN80
+    interface: "VLAN80"
+    network: "10.180.0.0/16"
+    dns: "10.180.0.1"
+    default_gateway: "10.180.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN80
+      ranges:
+        - "10.180.128.0-10.180.255.254"
+  - name: VLAN90
+    interface: "VLAN90"
+    network: "10.190.0.0/16"
+    dns: "77.88.8.8,77.88.8.1"
+    default_gateway: "10.190.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN90
+      ranges:
+        - "10.190.128.0-10.190.255.254"

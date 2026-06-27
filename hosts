@@ -3,6 +3,8 @@ switches-ros7:
   hosts:
     BR01:
       address: 10.110.0.2
+    BR02:
+      address: 10.110.0.3
     SW216-1:
       address: 10.110.0.4
     SW216-2:
@@ -20,13 +22,19 @@ routers-ros7:
   hosts:
     BR01:
       address: 10.110.0.2
+    BR02:
+      address: 10.110.0.3
 
 dhcp-servers:
   hosts:
     BR01:
       address: 10.110.0.2
+    BR02:
+      address: 10.110.0.3
 
-# dns-servers:
-#   hosts:
-#     BR01:
-#       address: 10.110.0.2
+dns-servers:
+  hosts:
+    BR01:
+      address: 10.110.0.2
+    BR02:
+      address: 10.110.0.3
