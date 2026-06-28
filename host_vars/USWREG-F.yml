@@ -72,13 +72,13 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: ether15
-    comment: Default Config
-    pvid: 20
+    comment: ATM
+    pvid: 90
     edge: yes
     loop-protect: on
   - name: ether16
-    comment: Default Config
-    pvid: 20
+    comment: ATM
+    pvid: 90
     edge: yes
     loop-protect: on
   - name: ether17
