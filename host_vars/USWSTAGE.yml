@@ -1,54 +1,86 @@
 ---
-# USWS02 specific settings
+# CRS326-24G-2S+ USWSL specific settings
 bridge_port:
   - name: ether1
-    comment: SKUD Back Entrance
-    pvid: 20
+    comment: Broadcast Main
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether2
-    comment: Default Config
-    pvid: 50
+    comment: Broadcast Backup
+    pvid: 11
+    edge: yes
+    loop-protect: on
   - name: ether3
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether4
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether5
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether6
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether7
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether8
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether9
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether10
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether11
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether12
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether13
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether14
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether15
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether16
     comment: Default Config
-    pvid: 50
+    pvid: 10
+    edge: yes
+    loop-protect: on
   - name: ether17
     comment: Trunk Native VLAN 10
     pvid: 10
@@ -84,8 +116,8 @@ bridge_port:
   - name: sfp-sfpplus1
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus2
     comment: Trunk port
     pvid: 10
-    tagged: [10,20,30,40,50,60,70,80,90]
+    tagged: [10,11,20,30,40,50,60,70,80,90]

@@ -1,0 +1,41 @@
+/ip firewall address-list
+add address=10.110.0.0/16 list=LAN
+add address=10.120.0.0/16 list=LAN
+add address=10.130.0.0/16 list=LAN
+add address=10.140.0.0/16 list=LAN
+add address=10.150.0.0/16 list=LAN
+add address=10.160.0.0/16 list=LAN
+add address=10.170.0.0/16 list=LAN
+add address=10.180.0.0/16 list=LAN
+add address=10.190.0.0/16 list=LAN
+
+
+/ip firewall filter
+add action=accept chain=input comment=NTP-Allow dst-port=123 protocol=udp
+add action=accept chain=output comment=NTP-Allow dst-port=123 protocol=udp
+add action=accept chain=input comment="Accept established connections" connection-state=established,related
+add action=accept chain=input comment="VRRP Connection Sync" dst-port=8275 protocol=udp
+add action=accept chain=input comment="ALLOW VRRP" dst-address=224.0.0.18 protocol=vrrp
+add action=accept chain=input dst-port=161 protocol=udp
+add action=accept chain=input in-interface-list=WAN src-address=194.146.113.0/24
+add action=accept chain=input comment=Swan@Home in-interface-list=WAN src-address=79.139.173.165
+add action=accept chain=input comment="pfarger(mariinsky)" in-interface-list=WAN src-address=84.204.53.0/24
+add action=drop chain=input in-interface-list=WAN
+add action=accept chain=input comment="Allow DNS Requests for Public WiFi VLAN" dst-port=53 protocol=udp src-address=10.190.0.0/16
+add action=drop chain=input src-address=10.190.0.0/16
+add action=accept chain=input comment="ALLOW MANAGMENT" dst-address=192.168.4.0/24 src-address=10.170.0.0/16
+add action=accept chain=input dst-port=53 protocol=udp src-address=10.0.0.0/8
+add action=accept chain=input disabled=yes dst-address=10.0.0.0/8 protocol=icmp src-address=10.0.0.0/8
+add action=accept chain=forward comment="Established, Related" connection-state=established,related
+
+
+add action=drop chain=forward connection-state=invalid,new dst-address=192.168.0.0/16 src-address-list=LAN
+add action=drop chain=forward connection-state=invalid,new dst-address=10.0.0.0/8 src-address-list=LAN
+add action=fasttrack-connection chain=forward comment=FastTrack connection-state=established,related hw-offload=yes
+add action=drop chain=forward dst-address-list=LAN src-address=10.190.0.0/16
+add action=accept chain=forward src-address=10.190.0.0/16
+add action=drop chain=forward disabled=yes dst-address=10.190.0.0/16 src-address-list=LAN
+add action=accept chain=forward src-address-list=LAN
+add action=drop chain=forward comment="Drop invalid" connection-state=invalid disabled=yes log=yes log-prefix=invalid
+add action=drop chain=forward comment="Drop incoming packets that are not NATted" connection-nat-state=!dstnat connection-state=new in-interface-list=WAN log=yes \
+    log-prefix=!NAT

@@ -2,13 +2,13 @@
 # CRS326-24G-2S+ USWSL specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 10
+    comment: Service Network Main
+    pvid: 50
     edge: yes
     loop-protect: on
   - name: ether2
-    comment: Default Config
-    pvid: 10
+    comment: Service Network Backup
+    pvid: 90
     edge: yes
     loop-protect: on
   - name: ether3

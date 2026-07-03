@@ -2,11 +2,11 @@
 vrrp:
   - name: VRRP10
     vrid: 10
-    priority: 200
+    priority: 100
     interface: VLAN10
   - name: VRRP11
     vrid: 11
-    priority: 200
+    priority: 100
     interface: VLAN11
   - name: VRRP20
     vrid: 20
@@ -18,11 +18,11 @@ vrrp:
     interface: VLAN30
   - name: VRRP40
     vrid: 40
-    priority: 100
+    priority: 200
     interface: VLAN40
   - name: VRRP50
     vrid: 50
-    priority: 100
+    priority: 200
     interface: VLAN50
   - name: VRRP60
     vrid: 60
@@ -30,13 +30,13 @@ vrrp:
     interface: VLAN60
   - name: VRRP70
     vrid: 70
-    priority: 100
+    priority: 200
     interface: VLAN70
   - name: VRRP80
     vrid: 80
-    priority: 100
+    priority: 200
     interface: VLAN80
   - name: VRRP90
     vrid: 90
-    priority: 100
+    priority: 200
     interface: VLAN90

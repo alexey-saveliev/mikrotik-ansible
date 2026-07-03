@@ -1,7 +1,7 @@
 ---
 ip_addresses:
   - interface: sfp-sfpplus1
-    address: "176.208.94.226/28"
+    address: "93.188.203.50/28"
   - interface: VLAN10
     address: 10.110.0.3/16
   - interface: VLAN11

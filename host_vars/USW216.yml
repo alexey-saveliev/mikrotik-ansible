@@ -56,17 +56,17 @@ bridge_port:
     comment: Default Config
     pvid: 50
   - name: ether19
-    comment: Default Config
+    comment: Balcony
     pvid: 50
   - name: ether20
-    comment: Default Config
+    comment: Balcony
     pvid: 50
   - name: ether21
-    comment: Printer Pult Boilernaya
-    pvid: 50
+    comment: 3-rd floor Press Center
+    pvid: 40
   - name: ether22
-    comment: Default Config
-    pvid: 50
+    comment: 3-rd floor Press Center
+    pvid: 40
   - name: ether23
     comment: Default Config
     pvid: 50

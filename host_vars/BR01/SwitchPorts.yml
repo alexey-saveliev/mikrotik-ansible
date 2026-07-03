@@ -2,23 +2,23 @@
 # BR01 switch ports specific settings
 bridge_port:
   - name: ether1
-    comment: Trunk port
+    comment: BR01
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: ether2
-    comment: Trunk port
+    comment: BR02
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: ether3
-    comment: Trunk port
+    comment: USWSR
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: ether4
-    comment: Trunk port
+    comment: USWF
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: ether5
-    comment: Trunk port
+    comment: USWSL
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: ether6
@@ -26,9 +26,10 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: ether7
-    comment: Trunk port
-    pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90]
+    comment: VLAN 70 - Temp Management port
+    pvid: 70
+    edge: yes
+    loop-protect: on
   - name: ether8
     comment: Trunk port
     pvid: 10
@@ -42,9 +43,10 @@ bridge_port:
     pvid: 10
     tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: ether11
-    comment: Trunk port
+    comment: MOnitoring Server
     pvid: 10
-    tagged: [10,11,20,30,40,50,60,70,80,90]
+    edge: yes
+    loop-protect: on
   - name: ether12
     comment: Management port
     pvid: 10
@@ -56,8 +58,9 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: sfp-sfpplus2
-    comment: Broadcast main
+    comment: USWSTAGE
     pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
   - name: sfp-sfpplus3
     comment: Trunk port
     pvid: 10

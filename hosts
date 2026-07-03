@@ -17,6 +17,9 @@ switches-ros7:
       address: 10.110.0.23
     USWSR:
       address: 10.110.0.24
+    USWSTAGE:
+      address: 10.110.0.25
+
 
 routers-ros7:
   hosts:

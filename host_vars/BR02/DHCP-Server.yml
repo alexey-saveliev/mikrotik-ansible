@@ -12,6 +12,16 @@ dhcp_server:
       name: DHCP-VLAN10
       ranges:
         - "10.110.128.0-10.110.255.254"
+  - name: VLAN11
+    interface: "VLAN11"
+    network: "10.111.0.0/16"
+    dns: "10.111.0.1"
+    default_gateway: "10.111.0.1"
+    lease_time: "1h"
+    pool:
+      name: DHCP-VLAN11
+      ranges:
+        - "10.111.128.0-10.111.255.254"
   - name: VLAN20
     interface: "VLAN20"
     network: "10.120.0.0/16"

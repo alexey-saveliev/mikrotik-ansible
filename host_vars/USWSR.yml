@@ -2,8 +2,8 @@
 # USWB02 specific settings
 bridge_port:
   - name: ether1
-    comment: Default Config
-    pvid: 50
+    comment: SKUD Back Entrance
+    pvid: 20
   - name: ether2
     comment: Default Config
     pvid: 50
