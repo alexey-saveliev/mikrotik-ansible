@@ -1,16 +1,40 @@
 ---
 switches-ros7:
   hosts:
-    # BR01:
-    #   address: 10.110.0.2
-    SW216-1:
-      address: 10.110.0.4
-    SW216-2:
-      address: 10.110.0.5
-    USWSL:
-      address: 10.110.0.22
-    USWF:
-      address: 10.110.0.23
+    R01:
+      address: 10.10.0.2
+    R02:
+      address: 10.10.0.3
+    SW01:
+      address: 10.10.0.4
+    SW02:
+      address: 10.10.0.5
+    SWAPPFC:
+      address: 10.10.0.11
+    SWBBSHOP:
+      address: 10.10.0.15
+    SWLOUNGE:
+      address: 10.10.0.35
+    SWMAINSTG:
+      address: 10.10.0.19
+    SWMRKT2:
+      address: 10.10.0.29
+    SWMSFOH:
+      address: 10.10.0.21
+    SWPRTNR51:
+      address: 10.10.0.51
+    SWREG:
+      address: 10.10.0.17
+    SWROOFVIP:
+      address: 10.10.0.12
+    SWSMSTG:
+      address: 10.10.0.14
+    SWURBAN:
+      address: 10.10.0.25
+    # USWSL:
+    #   address: 10.110.0.22
+    # USWF:
+    #   address: 10.110.0.23
 
 # dhcp-servers:
 #   hosts:

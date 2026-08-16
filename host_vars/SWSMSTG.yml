@@ -1,0 +1,136 @@
+---
+# CRS326-24G-2S+ SWSMSTG specific settings
+bridge_port:
+  - name: ether1
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether2
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether3
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether4
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether5
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether6
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether7
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether8
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether9
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether10
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether11
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether12
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether13
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether14
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether15
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether16
+    comment: Default Config
+    pvid: 10
+    edge: yes
+    loop-protect: on
+  - name: ether17    
+    setupNote: Wi-Fi Access Point
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether18
+    setupNote: Wi-Fi Access Point
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether19
+    setupNote: Wi-Fi Access Point
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether20
+    setupNote: Wi-Fi Access Point
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether21
+    setupNote: Wi-Fi Access Point
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether22
+    setupNote: Wi-Fi Access Point
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether23
+    setupNote: Wi-Fi Access Point
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]
+  - name: ether24
+    setupNote: Wi-Fi Access Point
+    comment: Trunk Native VLAN 10
+    pvid: 10
+    tagged: [20,30,40,50,60,70,80,90]    
+  - name: sfp-sfpplus1
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+    dhcp-snooping: trust
+  - name: sfp-sfpplus2
+    comment: Trunk port
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
+    dhcp-snooping: trust
+bridge:
+  name: bridge
+  dhcp-snooping: yes 
