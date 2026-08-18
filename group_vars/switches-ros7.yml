@@ -21,20 +21,20 @@ bridge_vlan:
   - vlanid: 10
     comment: Management
   - vlanid: 11
-    comment: Broadcast Backup
+    comment: RESERVED
   - vlanid: 20
-    comment: SKUD
+    comment: REG
   - vlanid: 30
     comment: ORG
   - vlanid: 40
-    comment: PRESS
+    comment: BROADCAST
   - vlanid: 50
-    comment: TECH
+    comment: RESERVED
   - vlanid: 60
-    comment: VIP
+    comment: RESERVED
   - vlanid: 70
-    comment: VLAN 70
+    comment: RESERVED
   - vlanid: 80
-    comment: VLAN 80
+    comment: VIP
   - vlanid: 90
     comment: Public WiFi
