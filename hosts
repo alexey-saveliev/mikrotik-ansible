@@ -40,7 +40,9 @@ switches-ros7:
 #   hosts:
 #     BR01:
 #       address: 10.110.0.2
-# dns-servers:
-#   hosts:
-#     BR01:
-#       address: 10.110.0.2
+dns-servers:
+  hosts:
+    R01:
+      address: 10.10.0.2
+    R02:
+      address: 10.10.0.3
