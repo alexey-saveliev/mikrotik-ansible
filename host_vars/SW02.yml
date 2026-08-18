@@ -133,7 +133,6 @@ bridge_port:
     edge: yes
     loop-protect: on
   - name: sfp-sfpplus24
-    comment: 3316 Broadcast Backup
-    pvid: 11
-    edge: yes
-    loop-protect: on
+    comment: SWMRKT2
+    pvid: 10
+    tagged: [10,11,20,30,40,50,60,70,80,90]
